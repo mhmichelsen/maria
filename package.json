@@ -1,0 +1,16 @@
+{
+  "name": "maria",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mhmichelsen/maria.git",
+  "author": "Maria Michelsen",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "sass sass-styles:public/stylesheets",
+    "start": "sass --watch sass-styles:public/stylesheets & live-server public/"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "sass": "^1.15.1"
+  }
+}
