@@ -6,11 +6,16 @@
   "author": "Maria Michelsen",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "sass sass-styles:public/stylesheets",
-    "start": "sass --watch sass-styles:public/stylesheets & live-server public/"
+    "build-images": "cpx 'src/images/**/*' dist/images",
+    "build-templates": "pug src --out dist",
+    "build-styles": "sass src/stylesheets:dist/stylesheets",
+    "start": "yarn build-templates -w & yarn build-styles --watch & yarn build-images --watch & live-server dist",
+    "build": "yarn build-templates && yarn build-styles && yarn build-images"
   },
-  "devDependencies": {
+  "dependencies": {
+    "cpx": "^1.5.0",
     "live-server": "^1.2.1",
-    "sass": "^1.15.1"
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.15.2"
   }
 }
