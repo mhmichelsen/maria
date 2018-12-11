@@ -1,0 +1,126 @@
+/* Introduction */
+#intro {
+  padding: 100px;
+}
+#intro #descrip {
+  width: 40vw;
+}
+#intro #descrip #tagline {
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 8rem 0 0 0;
+  text-transform: none;
+}
+#intro #descrip #elevator {
+  font-size: 1.5rem;
+  font-weight: light;
+}
+#intro #descrip .line {
+  background-color: #ffb526;
+  height: 10px;
+  width: 100px;
+  margin: 4rem 0;
+}
+#intro #profile {
+  float: right;
+  width: 40vw;
+}
+@media (max-width: 800px) {
+  #intro {
+    padding: 100px 1rem 0 1rem;
+  }
+  #intro #descrip {
+    width: 100%;
+  }
+  #intro #descrip #tagline {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  #intro #descrip #elevator {
+    font-size: 1.25rem;
+  }
+  #intro #descrip .line {
+    display: none;
+  }
+  #intro #profile {
+    float: none;
+    width: 100%;
+  }
+}
+
+#portfolio {
+  position: relative;
+  padding: 50px 100px;
+}
+#portfolio .project {
+  position: relative;
+  max-width: 1200px;
+  max-height: 400px;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(160, 160, 160, 0.2), 0 3px 10px 0 rgba(255, 255, 255, 0.1);
+  margin: 100px auto;
+}
+#portfolio .project .description {
+  padding: 50px 0 50px 50px;
+  width: 30%;
+}
+#portfolio .project .description h3.projectTitle {
+  font-family: Lato, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+#portfolio .project .cover {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#portfolio .project .cover img {
+  max-height: 400px;
+  max-width: 100%;
+  transition: all 0.5s ease;
+}
+@media (max-width: 800px) {
+  #portfolio .project .cover img {
+    max-height: 100%;
+  }
+}
+#portfolio .project .cover:hover img {
+  -moz-transform: scale(5.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+@media (max-width: 1200px) {
+  #portfolio {
+    padding: 100px;
+  }
+  #portfolio .project {
+    margin: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  #portfolio {
+    padding: 1rem;
+  }
+  #portfolio .project {
+    display: inline-block;
+    background-color: inherit;
+    box-shadow: none;
+    margin: 1rem 0;
+  }
+  #portfolio .project .description {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  #portfolio .project .description h3.projectTitle {
+    font-size: 1.5rem;
+  }
+  #portfolio .project ul {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
