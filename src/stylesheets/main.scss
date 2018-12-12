@@ -51,6 +51,9 @@ h4 {
 	margin: $space-reg /2 0 0 0;
 	font-weight: 400;
 }
+p.subtitle {
+	font-size: 1.25rem;
+}
 p {
 	font-family: $font-primary;
 	font-size: .9rem;
@@ -101,6 +104,9 @@ img {
 	width: 50%;
 	text-align: center;
 }
+.w20 {
+	width: 20%;
+}
 figcaption {
 	font-size: .75;
 	color: #A29B8D;
@@ -111,6 +117,13 @@ figcaption {
 .right {
 	float:right;
 	width: 50%;
+}
+.rightBig {
+	float:right;
+	width: 50%;
+	@media (max-width: 800px) {
+		float: none;
+	}
 }
 .left {
 	float:left;
@@ -131,6 +144,9 @@ figcaption {
 }
 video {
 	width: 100%;
+}
+.clip {
+	clip-path: circle(50% at 50% 50%);
 }
 
 /* general – class styles */
@@ -199,13 +215,16 @@ blockquote {
 		padding-top: 0;
 	} 
 }
+.recommend {
+
+}
 #header{
 	width: 100%;
 	position: fixed;
 	z-index: 100;
 	top: 0;
 	left: 0;
-	background-color: $snow;
+	background-color: inherit;
 	padding: 1.5rem $space-reg;
 	a {
 		font-family: $font-primary;
@@ -262,7 +281,7 @@ blockquote {
 		max-width: 200px;
 		margin: 1rem 0;
 	}
-	p, ul {
+	p, ul, blockquote {
 		max-width: 800px;
 	}
 }
