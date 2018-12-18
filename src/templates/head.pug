@@ -5,3 +5,11 @@ head
     link(rel='shortcut icon', type='image/x-icon', href='/images/favicon.ico')
     title Maria Michelsen
     link(rel='stylesheet', type='text/css', href='/stylesheets/main.css')
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111088895-4')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111088895-4');
+
