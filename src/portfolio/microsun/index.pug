@@ -2,12 +2,6 @@ doctype html
 html(lang='en')
 	include ../../templates/head.pug
 	body.white
-		header#header
-			a#logo(href='/') Maria Michelsen
-			nav.navigation
-				a(href='/#about') About
-				a(href='/#portfolio') Portfolio
-				a(href='/#contact') Contact
 		section#project
 			section.title.flex
 				#microsun.description
@@ -69,27 +63,8 @@ html(lang='en')
 					img(src='/images/MicroSunApp/MicroSun_App8.jpg', srcset='/images/MicroSunApp/MicroSun_App8.jpg 1x, /images/MicroSunApp/MicroSun_App8@0.5x.jpg 0.5x, /images/MicroSunApp/MicroSun_App8@2x.jpg 2x ', alt='Moodboard', height='auto', width='auto')
 			section#projectNav.section.flex
 				nav
-					a(href='/portfolio/bloom') < Prev
+					a(href='/portfolio/bloom') ← Prev Case Study
 				nav.right-align
-					a(href='/portfolio/meddle') Next >
-			section#contact
-				ul
-					li
-						a(href='https://behance.net/mhmichelsen', target='_blank')
-							img(src='/images/MHM-Icon_Behance.svg')
-					li
-						a(href='https://dribbble.com/mhmichelsen', target='_blank')
-							img(src='/images/MHM-Icon_Dribbble.svg')
-					li
-						a(href='https://instagram.com/mhmichelsen', target='_blank')
-							img(src='/images/MHM-Icon_Instagram.svg')
-					li
-						a(href='https://linkedin.com/in/mhmichelsen/', target='_blank')
-							img(src='/images/MHM-Icon_LinkedIn.svg')
-					li
-						a(href='mailto:maria@michelsen.dk', target='_blank')
-							img(src='/images/MHM-Icon_Email.svg')
-			footer#footer.flex
-				p.info © Maria Hagsten Michelsen, 2018. All Rights Reserved.
-				a(href=' ')
-					p.info.right-align Top
+					a(href='/portfolio/meddle') Next →
+	include ../../templates/footer.pug
+

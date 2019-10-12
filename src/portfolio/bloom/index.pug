@@ -2,12 +2,6 @@ doctype html
 html(lang='en')
 	include ../../templates/head.pug
 	body.white
-		header#header
-			a#logo(href='/') Maria Michelsen
-			nav.navigation
-				a(href='/#about') About
-				a(href='/#portfolio') Portfolio
-				a(href='/#contact') Contact
 		section#project
 			section.title.flex
 				#bloom.description
@@ -246,39 +240,18 @@ html(lang='en')
 				.picture
 					img(src='/images/Bloom/App.svg')
 			section.feature.flex
-				div.recommend.top
-					.picture.rightBig
-						img.clip(src='/images/Bloom/Eric.jpeg') 			
+				picture.w20.left
+					img.clip(src='/images/Bloom/Eric.jpeg') 
 				blockquote.quote
 					p
 						| &quot;I have worked extensively with Maria on Bloom, where she has developed our product visuals, brand, and UX as a phenomenal designer. Her work has helped us create lasting first impressions of our products that convey delight and trust.
-					p
-						| Maria is measured, delightful, and comprehensive as a designer. Her design approach is very systematic, which helps break down open-ended projects and create designs that are reusable and extensible throughout our entire product. Her illustrations give our product charm and whimsy. Besides that, she isn't attached to her work, a critical must for a good designer. She knows good design comes from the mockups and ideas that never see the light of day. I can trust her to explore and polish every aspect of a design, and come back with solutions toward the sole goal of making the product better.&quot;
+					p.top
+						| Maria is measured, delightful, and comprehensive as a designer. Her design approach is very systematic, which helps break down open-ended projects and create designs that are reusable and extensible throughout our entire product. Her illustrations give our product charm and whimsy. <br/><br/>Besides that, she isn't attached to her work, a critical must for a good designer. She knows good design comes from the mockups and ideas that never see the light of day. I can trust her to explore and polish every aspect of a design, and come back with solutions toward the sole goal of making the product better.&quot;
 					p.source
-						| Eric Xiao</br>Founder, Bloom
+						| Eric Xiao<br/>Founder, Bloom
 		section#projectNav.section.flex
 			nav
-				a(href='/#portfolio') Back to Portfolio
+				a(href='/#portfolio') Back to Works
 			nav.right-align
-				a(href='/portfolio/microsun') Next >
-		section#contact
-			ul
-				li
-					a(href='https://behance.net/mhmichelsen', target='_blank')
-						img(src='/images/MHM-Icon_Behance.svg')
-				li
-					a(href='https://dribbble.com/mhmichelsen', target='_blank')
-						img(src='/images/MHM-Icon_Dribbble.svg')
-				li
-					a(href='https://instagram.com/mhmichelsen', target='_blank')
-						img(src='/images/MHM-Icon_Instagram.svg')
-				li
-					a(href='https://linkedin.com/in/mhmichelsen/', target='_blank')
-						img(src='/images/MHM-Icon_LinkedIn.svg')
-				li
-					a(href='mailto:maria@michelsen.dk', target='_blank')
-						img(src='/images/MHM-Icon_Email.svg')
-		footer#footer.flex
-			p.info © Maria Hagsten Michelsen, 2018. All Rights Reserved.
-			a(href=' ')
-				p.info.right-align Top
+				a(href='/portfolio/microsun') Next Case Study →
+	include ../../templates/footer.pug

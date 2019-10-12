@@ -2,12 +2,6 @@ doctype html
 html(lang='en')
 	include ../../templates/head.pug
 	body.white
-		header#header
-			a#logo(href='/') Maria Michelsen
-			nav.navigation
-				a(href='/#about') About
-				a(href='/#portfolio') Portfolio
-				a(href='/#contact') Contact
 		section#project
 			section.title.flex
 				#meddle.description
@@ -126,12 +120,17 @@ html(lang='en')
 					video(controls='')
 						source(src='/images/Meddle/MeddleVideo.mp4', type='video/mp4')
 						|                         Your browser does not support the video tag.
+			section.feature.flex
+				picture.w20.left
+					img.clip(src='/images/Peter_Leonard.jpeg') 
+				blockquote.quote
+					p
+						| &quot;It's been a pleasure to work with Maria. She's a great listener, who made sure to understand my company's values and goals before producing any visuals. <br/><br/>Then she managed to capture the look and feel we're going for through the characters and video she created for us. She's a lot of fun to collaborate with, always coming up with great ideas when we're stuck creatively.&quot;
+					p.source
+						| Peter Leonard<br/>CEO, Meddle			
 			#projectNav.section.flex
 				nav
-					a(href='/portfolio/microsun') < Prev
+					a(href='/portfolio/microsun') ← Prev Case Study
 				nav.right-align
 					a(href='/#portfolio') Back to Portfolio
-			footer#footer.flex
-				p.info © Maria Hagsten Michelsen, 2018. All Rights Reserved.
-				a(href=' ')
-					p.info.right-align Top
+	include ../../templates/footer.pug
