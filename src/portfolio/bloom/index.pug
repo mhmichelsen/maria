@@ -3,14 +3,14 @@ html(lang='en')
 	include ../../templates/head.pug
 	body.white
 		section#project
-			section.title.flex
+			picture
+				img(src='/images/Bloom/coverWide.png')
+			section.section.title
 				#bloom.description
-					h1 Bloom
-					p.subtitle Making investing more accessible
-			.picture.wide
-				img(src='/images/Bloom/coverWide.svg')
+					h1 Reinventing Investing
+					p.subtitle – a case study about the creation of the investment app Bloom
 			section#problem.section.top
-				h2 The Problem
+				h2.h2part The Problem
 				p
 					| Most people are scared to invest. When they do, they often lose their money. Just ask the average investor, who earns 2.6% per year.
 				.picture
@@ -24,7 +24,7 @@ html(lang='en')
 				p
 					| Successful investors know their companies and industries deeply. Even for them, it still requires arduous research to understand a company’s financials, strategy, and valuation.
 			section.section
-				h2 The Solution
+				h2.h2part The Solution
 				p
 					| Facing this problem, we asked ourselves — how can we help the 86% who don’t invest today? How do we help more people invest in the best ideas? How do we help them take part in the wealth creation from innovation?
 				p
@@ -56,7 +56,7 @@ html(lang='en')
 				p.top 
 					| The following is a case study of the design process from the preliminary understanding of our users needs over product ideations and wireframing to building the product.
 			section.feature.flex
-				h2 My Role
+				h2.h2part My Role
 				ul
 					li
 						b UX/UI Design
@@ -74,7 +74,7 @@ html(lang='en')
 						b Cross-Functional Leadership
 						|  – collaborated closely with Engineers and Product Managers.
 			section.section.top
-				h2 The Design and Development Process
+				h2.h2part The Design and Development Process
 				p
 					| For our design process, we chose to follow the Design Thinking process because it is human-centered, solution-focused, flexible, iterative and fits well with the agile methodology.
 				.picture.w80
@@ -183,7 +183,7 @@ html(lang='en')
 					img(src='/images/Bloom/ExploreEvolution.png', srcset='/images/Bloom/ExploreEvolution.png 1x, /images/Bloom/ExploreEvolution@0.5x.png 0.5x, /images/Bloom/ExploreEvolution@2x.png 2x ', alt='Moodboard', height='auto', width='auto')
 					figcaption The evolution of the Discover page based on usability testing
 			section.section
-				h2 Visual Design
+				h2.h2part Visual Design
 				p
 					| The visual design of the product was guided by two sets of core values, which would ensure consistency across the product and that all design decisions were based on the same guidelines. The value sets are:
 				p 
@@ -253,5 +253,5 @@ html(lang='en')
 			nav
 				a(href='/#portfolio') Back to Works
 			nav.right-align
-				a(href='/portfolio/microsun') Next Case Study →
+				a(href='/portfolio/meddle') Next Case Study →
 	include ../../templates/footer.pug

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open Sans');
+@import url('https://fonts.googleapis.com/css?family=Noto Serif JP');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 /* reset */
 html, body, div, span, applet, object, iframe,
@@ -46,6 +47,7 @@ table {
 }
 /* variables */
 $font-primary: "Open Sans",Helvetica, sans-serif;
+$font-secondary: "Noto Serif JP", Times, serif;
 $font-accent: "Lato",Helvetica, sans-serif;
 $licorice: #0D0000;
 $snow: #FFFCF7;
@@ -90,16 +92,23 @@ h2 {
 	font-weight: 400;
 }
 h3 {
-	font-size: 1.35rem;
-	margin: $space-reg /3 0 0 0;
-	font-weight: 300;	
+	font-size: 1.75rem;
+	margin: $space-reg /2 0 0 0;
+	font-weight: 600;
+    @media (max-width: 800px){
+		font-size: 1.35rem;
+	}	
 }
 h4 {
-	font-size: 1rem;
+	font-size: 1.35rem;
 	margin: $space-reg /2 0 0 0;
 	font-weight: 400;
+	@media (max-width: 800px){
+		font-size: 1.15rem;
+	}
 }
 p.subtitle {
+	font-family: $font-primary;
 	font-size: 1.25rem;
 	margin: 1rem auto;
 	@media (max-width: 800px) {
@@ -107,11 +116,14 @@ p.subtitle {
 	}	
 }
 p {
-	font-family: $font-primary;
-	font-size: .9rem;
+	font-family: $font-secondary;
+	font-size: 1.15rem;
 	font-weight: 200;
-	margin-top: .25rem;
+	margin-top: 1rem;
 	line-height: 2;
+	@media (max-width: 800px) {
+		font-size: 1rem;
+	}
 }
 a {
 	text-decoration: none;
@@ -120,9 +132,34 @@ a {
 a:hover {
 	color: $sunshine;
 }
+a.inactive :hover{
+	color: $licorice;
+}
 ul {
-	list-style-type: none;
+	font-family: $font-secondary;
+	font-size: 1.15rem;
+	padding: 1rem;
 	line-height: 2;
+	li {
+		list-style-type: disc;
+		margin-top: 1rem;
+		}
+	@media (max-width: 800px) {
+		font-size: 1rem;
+	}
+}
+ol {
+	font-family: $font-secondary;
+	list-style-type: decimal;
+	font-size: 1.15rem;
+	padding: 1rem;
+	line-height: 2;
+	li {
+		margin-top: 1rem;
+		}
+	@media (max-width: 800px) {
+		font-size: 1rem;
+	}		
 }
 b {
 	font-family: $font-accent;
@@ -132,9 +169,16 @@ b {
 	text-align: center;
 }
 .info /* used for tags */{
+	font-family: $font-primary;
+	font-size: .75rem;
+	color: $faded;
+	font-weight: normal;}
+.projectInfo /* used for tags */{
+	font-family: $font-primary;
 	font-size: .75rem;
 	color: $faded;
 	font-weight: normal;
+	padding-top: 4rem;
 }
 .right-align {
 	text-align: right;
@@ -238,15 +282,14 @@ img {
 	width: 10%;
 }
 figcaption {
-	font-size: .75;
 	color: $faded;
-	text-align: left;
+	text-align: center;
 	font-style: italic;
-	margin-bottom: 2.5rem;
+	padding: 1rem 0 2rem 0;
 }
 .right {
 	float:right;
-	max-width: 50%;
+	max-width: 60%;
 	margin: 1rem 0 1.5rem 1rem;
 	@media (max-width: 600px) {
 		float: none;
@@ -256,8 +299,8 @@ figcaption {
 }
 .left {
 	float:left;
-	max-width: 50%;
-	margin: 1rem 2rem 1.5rem 0;
+	max-width: 60%;
+	margin: 1rem 1rem 1.5rem 0;
 	@media (max-width: 700px) {
 		float: none;
 		max-width: 100%;
@@ -434,7 +477,7 @@ hr.line {
 	#descrip{
 		padding: $space-reg *1.5 $space-reg;
 		#elevator{
-			font-size: 1.75rem;
+			font-size: 1.5rem;
 			font-weight: light;
 			max-width: 40vw;
 		}
@@ -478,7 +521,7 @@ hr.line {
 /* portfolio list */
 #portfolio{
 	position: relative;
-	padding: $space-reg /2 $space-reg *2;
+	padding: 0 $space-reg *2;
 	// background: white;
 	@media (max-width: 1024px) {
         padding: 1rem;
@@ -488,7 +531,7 @@ hr.line {
     }
 }	
 .cover {
-	height: 100%;
+	max-height: 500px;
 	overflow: hidden;
 	img {
 		max-width: 100%;
@@ -508,7 +551,7 @@ hr.line {
 	max-width: 100%;
 	max-height: 800px;
 	left: 0;   
-	margin: $space-reg *3 auto $space-reg *4 auto;
+	margin: $space-reg auto $space-reg *3.5 auto;
 	.info_left {
 		padding: $space-reg /2 0 $space-reg /2 $space-reg /2;
 		width: 50%;
@@ -516,7 +559,6 @@ hr.line {
 	.info_right {
 		padding: $space-reg /2 0 $space-reg /2 $space-reg /2;
 		width: 50%;
-		text-align: right;
 	}	
 	@media (max-width: 1024px) {
 		padding: 1rem;
@@ -631,13 +673,23 @@ hr.line {
 /****** Portfolio Pages ******/
 
 .title {
-    padding: $space-reg *2 $space-reg *2 $space-reg /4 $space-reg *2;
+    padding: $space-reg /2 0;
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     @media (max-width: 800px){
-        padding: $space-reg 2rem 1rem 2rem;
+		padding: $space-reg /3 0;
+		h1 {
+			font-size: 2rem;
+		}
     }
+}
+h2.h2part {
+	margin: $space-reg 0 $space-reg /2 0;
+    @media (max-width: 800px){
+		margin: $space-reg /3 0;
+		font-size: 1.75rem;
+	}
 }
 h3.bloom {
     color: #228F9B;
