@@ -3,7 +3,7 @@ html(lang='en')
 	include ./templates/head.pug
 	body
 		#arrow
-			img#arrow(src='/images/Arrow.svg')
+			img#arrow(src='/static/images/Arrow.svg')
 		section#intro.flex
 			#descrip
 				h1 Hi there!
@@ -11,11 +11,11 @@ html(lang='en')
 				a(href='https://linkedin.com/in/mhmichelsen/', target=' ')
 					button.CTA_high Connect
 			#hero.smallhide
-				img#alterego(src='/images/AlterEgo.svg')
+				img#alterego(src='/static/images/AlterEgo.svg')
 		section#portfolio
 			section#ghftx.project
 				.cover.left
-					img(src='/images/GHftx/GH_onboarding_portfolio_cover.gif', height='auto', width='auto')
+					img(src='/static/images/GHftx/GH_onboarding_portfolio_cover.gif', height='auto', width='auto')
 				p.info_right.inactive
 					//- p.projectInfo.right-align Coming soon
 					h2.right-align Balancing delight and trust in a fintech onboarding
@@ -23,7 +23,7 @@ html(lang='en')
 			section#bloom.project
 				.cover.right
 					a(href='portfolio/bloom')
-						img(src='/images/Bloom/cover.png', srcset='/images/Bloom/cover.png 1x, /images/Bloom/cover@2x.png 2x', alt='Bloom cover image', height='auto', width='auto')
+						img(src='/static/images/Bloom/cover.png', srcset='/static/images/Bloom/cover.png 1x, /static/images/Bloom/cover@2x.png 2x', alt='Bloom cover image', height='auto', width='auto')
 				a.info_left(href='portfolio/bloom')
 					p.projectInfo Project 1 of 2
 					h2 Reinventing Investing
@@ -31,7 +31,7 @@ html(lang='en')
 			section#meddle.project
 				.cover.left
 					a(href='portfolio/meddle')
-						img(src='/images/Meddle/Meddle_rebranding_portfolio_cover.png', height='auto', width='auto')
+						img(src='/static/images/Meddle/Meddle_rebranding_portfolio_cover.png', height='auto', width='auto')
 				a.info_right(href='portfolio/meddle')
 					p.projectInfo.right-align Project 2 of 2 
 					h2.right-align Matching a Dating App with its Target Audience
@@ -41,17 +41,17 @@ html(lang='en')
 				.flex
 					.recommendation
 						picture
-							img.clip(src='/images/Bloom/Bloom_Eric.jpeg') 			
+							img.clip(src='/static/images/Bloom/Bloom_Eric.jpeg') 			
 						p.quote &quot;Maria is measured, delightful, and comprehensive as a designer. Her design approach is very systematic, which helps break down open-ended projects and create designs that are reusable and extensible throughout our entire product.&quot;
 						p.source
 							| Eric Xiao<br/>Founder, Bloom		
 					.recommendation
 						picture
-							img.clip(src='/images/Meddle/Meddle_Peter_Leonard.jpeg') 		
+							img.clip(src='/static/images/Meddle/Meddle_Peter_Leonard.jpeg') 		
 						p.quote &quot;Maria is a great listener, who made sure to understand my company's values and goals before producing any visuals. She's a lot of fun to collaborate with, always coming up with great ideas when we're stuck creatively.&quot;
 						p.source Peter Leonard<br/>CEO, Meddle
 		section#outro
-			img.left.w40.smallhide(src='/images/MHMprofile.jpg', srcset='/images/MHMprofile.jpg 1x, /images/MHMprofile@0.5.jpg 0.5x, /images/MHMprofile@2x.jpg 2x ', alt='Maria Michelsen profile picture', height='auto', width='auto')
+			img.left.w40.smallhide(src='/static/images/MHMprofile.jpg', srcset='/static/images/MHMprofile.jpg 1x, /static/images/MHMprofile@0.5.jpg 0.5x, /static/images/MHMprofile@2x.jpg 2x ', alt='Maria Michelsen profile picture', height='auto', width='auto')
 			div#goodbye
 				h1 Hi again, 
 				p.splash Thanks for visiting.
