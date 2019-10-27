@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open Sans');
 @import url('https://fonts.googleapis.com/css?family=Noto Serif JP');
-@import url('https://fonts.googleapis.com/css?family=Lato');
 /* reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -48,7 +47,6 @@ table {
 /* variables */
 $font-primary: "Open Sans",Helvetica, sans-serif;
 $font-secondary: "Noto Serif JP", Times, serif;
-$font-accent: "Lato",Helvetica, sans-serif;
 $licorice: #0D0000;
 $snow: #FFFCF7;
 $sunshine: #ffb526;
@@ -80,16 +78,16 @@ h1 {
 		font-size: 2rem;
 	}
 }
-h1.splash {
-	text-align: center;
-	margin: $space-reg *2;
-}
 h2 {
 	font-size: 2.5rem;
 	letter-spacing: .065rem;
 	line-height: 1.25;
 	margin: 1rem 0;
 	font-weight: 400;
+	@media (max-width: 800px){
+		font-size: 1.5rem;
+		margin: .5rem 0;
+	}
 }
 h3 {
 	font-size: 1.75rem;
@@ -112,6 +110,7 @@ p.subtitle {
 	font-size: 1.25rem;
 	margin: 1rem auto;
 	@media (max-width: 800px) {
+		font-size: 1.125rem;
 		margin: .5rem 0;
 	}	
 }
@@ -128,12 +127,18 @@ p {
 a {
 	text-decoration: none;
 	color: $licorice;
+	-webkit-transition: .3s; /* For Safari 3.1 to 6.0 */
+	transition: .3s;
 }
 a:hover {
 	color: $sunshine;
 }
-a.inactive :hover{
-	color: $licorice;
+a img {
+	-webkit-transition: transform .3s ease-out; /* For Safari 3.1 to 6.0 */
+	transition: transform .3s ease-out;	
+}
+a img:hover {
+	transform: scale(1.03);
 }
 ul {
 	font-family: $font-secondary;
@@ -162,7 +167,6 @@ ol {
 	}		
 }
 b {
-	font-family: $font-accent;
 	font-weight: 900;
 }
 .center {
@@ -172,16 +176,13 @@ b {
 	font-family: $font-primary;
 	font-size: .75rem;
 	color: $faded;
-	font-weight: normal;}
-.projectInfo /* used for tags */{
-	font-family: $font-primary;
-	font-size: .75rem;
-	color: $faded;
 	font-weight: normal;
-	padding-top: 4rem;
 }
 .right-align {
 	text-align: right;
+	@media (max-width: 800px){
+		text-align: left;
+	}
 }
 ul.tags {
 	padding: 0;
@@ -195,39 +196,60 @@ ul.tags {
 .top {
 	padding-top: $space-reg /4;
 }
-p.quote {
-	font-family: $font-accent;
-	font-size: 1rem;
-	font-weight: 500;
-	padding-left: -50px;
+blockquote {
+	margin: 1rem 0 3rem 0;
+	p.quote {
+		font-family: $font-primary;
+		font-size: 1rem;
+		font-weight: 500;
+		padding-left: -50px;
+	}
+	p.source {
+		font-family: $font-primary;
+		font-size: 1rem;
+		font-weight: bold;
+		text-align: right;
+	}
 }
-p.source {
-	font-family: $font-accent;
-	font-size: 1rem;
-	font-weight: bold;
-	text-align: right;
+.inactive {
+	color: rgb(175, 174, 174);
+}
+hr {
+	border: none;
+	height: 1.5rem;
 }
 /* Buttons */
-button:hover {
-	border: 3px solid $licorice;
-	color: $sunshine;
-}
 .CTA_high {
-	font-size: 1.125em;
+	width: 360px;
+	height: 80px;
+	cursor: pointer;
+	font-size: 1rem;
+	letter-spacing: .06rem;
+	line-height: 1rem;
 	color: $licorice;
+	// text-align: left;
 	text-transform: uppercase;
 	font-weight: bold;
-	background-color: transparent; 
+	background-color: $snow; 
 	border: 3px solid $sunshine;
-	border-radius: 5px;
+	border-radius: 8px;
 	margin-top: 2em;
 	padding: 1.25em 4em;
+	-webkit-transition: .5s ease-out; /* For Safari 3.1 to 6.0 */
+	transition: .5s;	
     @media (max-width: 800px) {
-        padding: 1rem;
-    }
+		width: 80vw;
+		height: 60px;
+		font-size: .75rem;
+		padding: 1rem;
+	}
+	&:hover {
+		letter-spacing: .08rem;
+		transform: scale(1.015);
+	}
 }
 .CTA_medium {
-	font-family: $font-accent;
+	font-family: $font-primary;
 	font-size: 1rem;
 	text-align: center;
 	text-decoration: none;
@@ -236,9 +258,14 @@ button:hover {
 	// border-bottom: 3px solid ;
 	font-weight: 600;
 	text-transform: uppercase;
+	-webkit-transition: .5s; /* For Safari 3.1 to 6.0 */
+	transition: .5s;
+	&:hover {
+		letter-spacing: 1px;
+	}
 }
 .CTA_low {
-	font-family: $font-accent;
+	font-family: $font-primary;
 	font-size: .85rem;
 	text-align: center;
 	text-decoration: none;
@@ -246,13 +273,15 @@ button:hover {
 	align-items: center;
 	font-weight: 400;
 	text-transform: uppercase;
+	-webkit-transition: .5s; /* For Safari 3.1 to 6.0 */
+	transition: .5s;
+	&:hover {
+		letter-spacing: 2px;
+	}	
 }
 /* Images */
-.picture {
-	// width: inherit;
-	// height: 100%;
-	margin: 2rem auto 0 auto;
-	text-align: center;
+picture {
+	max-width: 100%;
 }
 img {
 	max-width: 100%;
@@ -271,6 +300,9 @@ img {
 }
 .w40 {
 	width: 40%;
+	@media (max-width: 800px){
+		width: 100%;
+	}
 }
 .w30 {
 	width: 30%;
@@ -307,6 +339,9 @@ figcaption {
 		margin: 1rem auto;		
 	}	
 }
+.center-img {
+	margin: 0 auto;
+}
 .inline {
 	display: inline;
 	margin: 0 .5rem 0 0;
@@ -314,8 +349,13 @@ figcaption {
 	max-width: 1rem;
 	vertical-align: middle;
 }
-.smallhide /* used to hight content on smaller screens */{
+.smallhide /* used to hide content on smaller screens */{
 	@media (max-width: 600px) {
+		display: none;
+	}
+}
+.bighide /* used to hide content on biggest screens */{
+	@media (min-width: 600px) {
 		display: none;
 	}
 }
@@ -349,6 +389,7 @@ video {
 		margin: 1rem 0;
 		div, ul, picture, nav {
 			flex: none;
+			margin: 0 auto;
 		}
 	}
 }
@@ -366,9 +407,10 @@ video {
 			margin-left: $space-reg /3;
 		}
 	}
-	@media (max-width: 1024px) {
+	@media (max-width: 800px) {
 		padding: 1rem 1rem;
 		background: $snow;
+		z-index: 100;
 		a {
 			padding: 0 1rem 0 0;
 		}
@@ -433,27 +475,37 @@ hr.line {
 }
 #testimonials {
 	@media (max-width: 1024px) {
-		margin: 2.5rem;
+		margin: 1rem;
 	}
 }
 .recommendation {
 	margin: 2.5rem 1.5rem;
 }
 .splash{
+	font-family: $font-primary;
 	font-size: 2rem;
 	font-weight: light;
+	@media (max-width: 800px){
+		font-size: 1.5rem;
+	}
 }  
 /****** Landing Page Specific ******/
 #arrow {
 	position: absolute;
 	width: 6vw;
-	right: 38%;
-	top: 0;
-	z-index: 100;
+	right: 21vw;
+	top: -280px;
+	z-index: 50;
+	-webkit-transition: .8s ease-in-out;
+	transition: .8s ease-in-out;
 	@media (max-width: 600px) {
 		width: 20vw;
-		right: 48%;
-	}	
+		top: -205px;
+		right: 1rem;
+	}
+	&:hover {
+		top: -130px;
+	}
 }
 #hero {
 	position: absolute;
@@ -468,27 +520,22 @@ hr.line {
     @media (max-width: 1024px) {
 		right: $space-reg;
 		top: 3rem;
-	}	
+	}
 }
 #intro {
 	height: 100vh;
-	max-height: 800px;
-	padding: $space-reg /2 $space-reg;
+	// max-height: 800px;
+	padding: $space-reg $space-reg;
 	#descrip{
 		padding: $space-reg *1.5 $space-reg;
 		#elevator{
+			font-family: $font-primary;
 			font-size: 1.5rem;
 			font-weight: light;
-			max-width: 40vw;
-		}
-		.line {
-			background-color: #ffb526;
-			height: 10px;
-			width: 100px;
-			margin: 4rem 0;
-        }       
+			max-width: 32vw;
+		}      
 	}
-    @media (max-width: 1024px) {
+    @media (max-width: 1366px) {
 		padding: 2rem 1rem 1rem 1rem;
 		max-height: 700px;		
         #descrip {
@@ -499,21 +546,20 @@ hr.line {
         }
 	}
     @media (max-width: 600px) {
-        padding: 2rem 1rem 1rem 1rem;
+		padding: 6rem 1rem 1rem 1rem;
+		text-align: center;		
         #descrip {
-			padding: 4rem 1rem 1rem 10rem;
+			padding: 2rem 1rem;
 			#elevator {
-                font-size: 1.125rem;
+				font-size: 1.25rem;
+				max-width: 100vw;
             }
         }
 	}
     @media (max-width: 350px) {
         padding: 2rem .5rem .5rem .5rem;
         #descrip {
-			padding: 2rem 1rem 1rem 8rem;
-			#elevator {
-                font-size: 1rem;
-            }
+			padding: 2rem 1rem 1rem .5rem;
         }
     }	
 }
@@ -521,8 +567,7 @@ hr.line {
 /* portfolio list */
 #portfolio{
 	position: relative;
-	padding: 0 $space-reg *2;
-	// background: white;
+	padding: 0 $space-reg *2.5;
 	@media (max-width: 1024px) {
         padding: 1rem;
     }
@@ -533,55 +578,42 @@ hr.line {
 
 #gh-onboarding-image-wrapper {
 	margin: 0 auto;
-	max-width: 70vw; 
+	max-width: 35vw;
+	@media (max-width: 800px) {
+		max-width: 100vw;
+	}
 }
 
 .cover {
-	max-height: 500px;
-	overflow: hidden;
-	img {
+	max-width: 40vw; 
+	@media (max-width: 800px) {
 		max-width: 100%;
-		transition: all 0.5s ease;
-		@media (max-width: 800px) {
-			max-height: 100%;
-		}
 	}
 }
-// .cover:hover img {
-// 	-moz-transform: scale(1.1);
-// 	-webkit-transform: scale(1.1);
-// 	transform: scale(1.1);
-// }	
 .project{
 	position: relative;
-	max-width: 100%;
-	max-height: 800px;
+	max-height: 100vh;
 	left: 0;   
-	margin: $space-reg auto $space-reg *3.5 auto;
-	.info_left {
-		padding: $space-reg /2 0 $space-reg /2 $space-reg /2;
-		width: 50%;
-	}
-	.info_right {
-		padding: $space-reg /2 0 $space-reg /2 $space-reg /2;
-		width: 50%;
-	}	
-	@media (max-width: 1024px) {
-		padding: 1rem;
-		.project {
-			margin: 1rem;
-		}
+	margin: $space-reg *4 auto $space-reg *6 auto;
+	@media (max-width: 1366px) {
+		margin: $space-reg auto $space-reg *3.5 auto;
 	}    
 	@media (max-width: 800px) {
 		padding: 0;
-		margin: 5rem .5rem .5rem .5rem;
-		.info_right {
-			width: 100%;
-			text-align: left;
-		}
+		margin: .5rem 2rem 6rem 2rem;
 	}
 }
-
+.project-number /* used for project number */{
+	font-family: $font-primary;
+	letter-spacing: .05rem;
+	font-size: .75rem;
+	color: $faded;
+	font-weight: normal;
+	padding-top: 4rem;
+	@media (max-width: 800px){
+		padding-top: 0rem;
+	}
+}
 /* Outro */
 #outro {
 	// max-width: 50%;
