@@ -594,7 +594,7 @@ hr.line {
 	position: relative;
 	max-height: 100vh;
 	left: 0;   
-	margin: $space-reg *4 auto $space-reg *6 auto;
+	margin: $space-reg *3 auto $space-reg *4 auto;
 	@media (max-width: 1366px) {
 		margin: $space-reg auto $space-reg *3.5 auto;
 	}    
