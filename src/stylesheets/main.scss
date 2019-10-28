@@ -416,7 +416,7 @@ video {
 		}
 	}	
 }
-/****** Block Elements ******/
+/****** Content Elements ******/
 hr.line {
 	border-top: 3px solid $licorice;
 	border-style: solid;
@@ -622,6 +622,12 @@ hr.line {
 		padding:$space-reg /3 $space-reg 0 $space-reg /2;
 		h1 {
 			margin-top: $space-reg;
+		}
+		.name {
+			font-family: $font-primary;
+			font-size: 1.25rem;
+			font-weight: bold;
+			margin-top: 3rem;
 		}
 	}
     @media (min-width: 1500px) {
