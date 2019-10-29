@@ -539,7 +539,7 @@ hr.line {
 	// max-height: 800px;
 	padding: $space-reg $space-reg;
 	#descrip{
-		padding: $space-reg *2.5 $space-reg;
+		padding: $space-reg *1.5 $space-reg;
 		#elevator{
 			font-family: $font-primary;
 			font-size: 1.5rem;
@@ -551,7 +551,7 @@ hr.line {
 		padding: 2rem 1rem 1rem 1rem;
 		max-height: 700px;		
         #descrip {
-			padding: $space-reg *2 $space-reg *1.5;
+			padding: $space-reg *1.5 $space-reg *1.5;
 			#elevator {
                 font-size: 1.125rem;
             }
