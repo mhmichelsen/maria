@@ -91,7 +91,7 @@ h2 {
 }
 h3 {
 	font-size: 1.75rem;
-	margin: $space-reg /2 0 0 0;
+	padding: $space-reg /2 0 0 0;
 	font-weight: 600;
     @media (max-width: 800px){
 		font-size: 1.35rem;
@@ -283,6 +283,9 @@ hr {
 picture {
 	max-width: 100%;
 }
+.picture {
+	margin-top: 1rem;
+}
 img {
 	max-width: 100%;
 }
@@ -351,6 +354,11 @@ figcaption {
 }
 .smallhide /* used to hide content on smaller screens */{
 	@media (max-width: 600px) {
+		display: none;
+	}
+}
+.mediumhide /* used to hide content on medium and small screens */{
+	@media (max-width: 1160px) {
 		display: none;
 	}
 }
@@ -715,7 +723,64 @@ hr.line {
 }
 
 /****** Portfolio Pages ******/
-
+#toc {
+	position: absolute;
+	position: fixed;
+	top: 15vh;
+	max-width: 200px;
+	margin: 0 0 0 1.5rem;
+	ol {
+		font-family: $font-primary;
+		font-size: .75rem;
+		list-style-type: none;
+		line-height: 1rem;
+		max-width: 400px;
+		li {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	span.line1, .line2, .dot {
+		display: inline-block;
+		background-color: black;
+		vertical-align: baseline;
+		opacity: 20%;
+	}
+	span.line1 {
+		border-radius: 0 2px 2px 0;
+		width: 20px;
+		height: 3px;
+	}
+	span.line2 {
+		border-radius: 0 1px 1px 0;
+		width: 10px;
+		height: 2px;
+	}
+	span.dot {
+		border-radius: 2px;
+		width: 4px;
+		height: 4px;
+	}	
+	span.toc-item {
+		visibility: hidden;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 20px;
+		opacity: 80%;
+	}	
+	a:hover {
+		color: $licorice;
+	}
+	&:hover {
+		span.toc-item {
+			visibility: visible;
+		}
+		span.line1, .line2, .dot {
+			display: none;
+		}
+	}
+}
 .title {
     padding: $space-reg /2 0;
     h1 {
@@ -729,7 +794,7 @@ hr.line {
     }
 }
 h2.h2part {
-	margin: $space-reg 0 $space-reg /2 0;
+	padding: $space-reg /2 0 $space-reg /3 0;
     @media (max-width: 800px){
 		margin: $space-reg /3 0;
 		font-size: 1.75rem;

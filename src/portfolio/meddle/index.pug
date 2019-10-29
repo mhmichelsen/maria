@@ -2,27 +2,63 @@ doctype html
 html(lang='en')
 	include ../../templates/head.pug
 	body.white
+		nav#toc.mediumhide
+			ol
+				a(href='#prologue') 
+					li <span class="line1"></span><span class="toc-item">Prologue</span>
+				a(href='#part1') 
+					li <span class="line1"></span><span class="toc-item">Part 1 • Understanding the Problem</span>
+				a(href='#one1') 
+					li <span class="line2"></span><span class="toc-item">1.1 Stakeholder Interviews</span>
+				a(href='#one2') 
+					li <span class="line2"></span><span class="toc-item">1.2 The Hypothesis</span>
+				a(href='#one3') 
+					li <span class="line2"></span><span class="toc-item">1.3 Testing the hypothesis on potential users</span>					
+				a(href='#part2') 
+					li <span class="line1"></span><span class="toc-item">Part 2 • From Exploration to Rebranding</span>
+				a(href='#two1') 
+					li <span class="line2"></span><span class="toc-item">2.1 Color palette Explorations</span>
+				a(href='#two2') 
+					li <span class="line2"></span><span class="toc-item">2.2 Logo transformation</span>
+				a(href='#two3') 
+					li <span class="line2"></span><span class="toc-item">2.3 Typography</span>
+				a(href='#two4') 
+					li <span class="line2"></span><span class="toc-item">2.4 UI design changes</span>
+				a(href='#two5') 
+					li <span class="line2"></span><span class="toc-item">2.5 Adding something extra</span>
+				a(href='#part3') 
+					li <span class="line1"></span><span class="toc-item">Part 3 • Retesting the Redesign</span>
+				a(href='#three1') 
+					li <span class="line2"></span><span class="toc-item">3.1 Conducting a comparative test</span>
+				a(href='#three2') 
+					li <span class="line2"></span><span class="toc-item">3.2 Results</span>
+				a(href='#three3') 
+					li <span class="line2"></span><span class="toc-item">3.3 What I’ve learned</span>
+				a(href='#epilogue') 
+					li <span class="line1"></span><span class="toc-item">Epilogue</span>
+				a(href='#recommendation') 
+					li <span class="dot"></span><span class="toc-item">Client recommendation</span>
 		section#project
 			picture
-				img(src='/static/images/Meddle/Meddle_rebranding_cover.jpg', height='auto', width='auto')
+				img(src='/static/images/Meddle/Meddle_rebranding_cover.jpg', srcset='/static/images/Meddle/Meddle_rebranding_cover.jpg 1x, /static/images/Meddle/Meddle_rebranding_cover@2x.jpg 2x', alt="Meddle Case Study cover" height='auto', width='auto')
 			section.section.title
 				#meddle.description
 					h1 Matching a Dating App with its Target Audience
 					p.subtitle – a case study about the rebranding of Meddle
-			section.section
+			section#prologue.section
 				h2.h2part Prologue
 				p Laura is a 28-year-old high school teacher living in Seattle. She just came back from a disappointing date and is wondering if she will ever find someone right for her. Curled up on the couch, she absentmindedly scrolls along on Facebook. She is still preoccupied with thoughts about her dating life and ponders “If only I could get some help!”
 				p Ironically enough she just missed an ad for a new dating app, which would have let her outsource the task of picking dates to her friends. If she had noticed it, she would have said: “Wow, this is perfect.” But she missed it completely.
 				p Why?
 				p In 2017, I was hired to find out and this is the story about the rebranding of Meddle.
-			section.section
+			section#part1.section
 				h2.h2part Part 1 • Understanding the Problem
 				p There I was, facing the big question mark. On the left, I have an app that lets daters outsource the task of matchmaking to their friends. On the right, I have a group of daters, who are suffering from dating fatigue and wish they could get help. It should be an ideal match. So why does the product not match with its target audience? I jumped into the investigation following these steps:
 				ul
 					li <b>Interview the Stakeholders</b> to understand the thoughts behind the product, the decisions behind the brand, and their definition of the target audience.
 					li <b>Define a hypothesis</b> for why the brand isn’t speaking to the target audience.
 					li <b>Test the hypothesis on potential users</b> to understand why the brand fails to relate to the target audience.
-				h3 1.1 Interviewing the stakeholders
+				h3#one1 1.1 Stakeholder Interviews
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_product_vision_vs_brand.jpg', height='auto', width='auto')
 					figcaption Notes from stakeholder interview and the current brand assets				
@@ -34,10 +70,10 @@ html(lang='en')
 				p Additional factors could be taken into account like income level, living conditions, city vs. countryside, etc. but I needed to ensure that it would be possible to conduct interviews within the time and budget constraints.
 				p <b>Logo Origin.</b> I learned that the brand was based on a metaphor of a Ferris wheel. Its origin came from personal experience, but it had since morphed into a vision of a dater on the ride with their meddlers. It’s a metaphor about being together in a fun, supportive and safe environment.
 				p <b>Core Values.</b> I asked the stakeholders to come up with three words that defined what they wanted their brand to embody. They came back with: Approachable, Fun, and Trustworthy.
-				h3 1.2 The hypothesis
+				h3#one2 1.2 The hypothesis
 				p The founder told me that initial research had shown that in general people didn’t find dating apps trustworthy. Therefore, Meddle had emphasized this value in their brand development. My hypothesis at this point was that it was this decision that har resulted in a brand that didn’t attract the right audience. By focusing on creating a trustworthy appearance they might have removed the brand to far away from anything dating app related.
 				p However, before I could start rebranding, I would have to put my hypothesis to the test.
-				h3 1.3 Testing the hypothesis on potential users
+				h3#one3 1.3 Testing the hypothesis on potential users
 				p To better understand how the brand was perceived, I talked to 32 potential users. I selected people who fitted with the target audience without having prior knowledge of the product.
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_test_participants_round1.png', height='auto', width='auto')
@@ -57,9 +93,9 @@ html(lang='en')
 					li The color palette, which looks too corporate and dull.
 					li Image style. This issue was noted by 16 participants who in different ways pointed out that the use of stock photos made the social media post and the landing page look too mainstream and “template-like.”
 				p Based on the data, I decided that the hypothesis was correct and that the rebranding should focus on making the brand look less corporate and more fun.
-			section.section
+			section#part2.section
 				h2.h2part Part 2 • From Exploration to Rebranding
-				h3 2.1 Color palette Explorations
+				h3#two1 2.1 Color palette Explorations
 				p The way the color palette was implemented led to a very dark and subdued look, which created the corporate association. To make the new color palette match the target audience's expectations, I 	focused on:
 				ol
 					li be more dating app appropriate,
@@ -67,31 +103,30 @@ html(lang='en')
 					li appeal to the target audience.
 				p I developed multiple color palette explorations and tested them in small target audience groups looking for the one palette that fulfilled all the requirements.
 				.picture
-					img(src='/static/images/Meddle/Meddle_rebranding_color_palette_explorations.jpg', height='auto', width='auto')
+					img(src='/static/images/Meddle/Meddle_rebranding_color_palette_explorations.png', srcset='/static/images/Meddle/Meddle_rebranding_color_palette_explorations.png 1x, /static/images/Meddle/Meddle_rebranding_color_palette_explorations@2x.png 2x', alt="Meddle color palette explorations" height='auto', width='auto')
 					figcaption Color palette explorations
 				p <b>The biggest surprise.</b> At an early stage, the use of purple or pink seemed like good choices to help the brand stand out compared to the competition. However, user tests revealed that those colors didn’t speak to the target audience. Pink spoke more to women than men, but in general, it scored very low in all audience groups. Purple did even worse, only scoring higher than green.
 				p <b>Finding the final palette.</b> Blue with an orange contrast color was the color combination that did best in tests. However, both of the blue colors that were tested, were deemed too close to competitors. In the final color palette, as seen below, I went with a turquoise primary color. It did as well as the blue color with the male target audience and 26% better than the blue with the female target groups.
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_colors.png', height='auto', width='auto')
 					figcaption Final color palette
-				h3 2.2 Logo transformation
+				h3#two2 2.2 Logo transformation
 				p Since the Ferris wheel was a core metaphor in the product’s history, I decided that it was important to strive to maintain it to some extent. After exploring multiple logo solutions I ended up choosing to reshape the old logo.
-				.picture
-					img(src='/static/images/Meddle/Meddle_rebranding_logo_transformation_animation.gif', height='auto', width='auto')
-					figcaption The logo transformation
+				div#meddle-logo-transformation-wrapper
+				figcaption The logo transformation
 				p In the final design of the logo mark, I used more rounded and organic shapes to make it feel less corporate. Furthermore, I incorporated a negative heart shape into the mark to make it subtly indicate a “dating app.” In addition, I added an amber depth effect, which represents the meddlers that “has the dater’s back.”
 				p Apart from the new logo mark, the original text mark was gently adjusted to make it more harmonious and to make it fit with the new mark.
 				p A comparative user test (more about this later) showed that the redesign increased the correct product association from 0% to 68%, with 22 potential users guessing that it would be the logo mark for a dating app.
-				h3 2.3 Typography
+				h3#two3 2.3 Typography
 				p Meddle used Avenir Next in its original brand. After some preliminary explorations, I decided to keep the font. My reasoning was that switching wouldn’t add enough value to outway the effort and cost of the change.
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_typography.png', height='auto', width='auto')
-				h3 2.4 UI design changes
+				h3#two4 2.4 UI design changes
 				p I designed a simple and clean app icon that “pops” when seen on a screen filled with other app icons. I used the new color palette to change the appearance of the app to make it feel brighter, simpler, and more approachable.
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_UI_design_changes.jpg', height='auto', width='auto')
 					figcaption A comparison between the old and the new UI design
-				h3 2.5 Adding something extra
+				h3#two5 2.5 Adding something extra
 				p During the interviews, multiple participants had mentioned that the use of stock photos made the brand look mainstream and “template-like.” This was a big concern for the stakeholders, who requested something that would make it stand out more. I, therefore, decided to introduce the use of an illustrative style instead.
 				p I did multiple explorations to find a style that both fitted the brand, the target audience, and the stakeholders. In the end, the style chosen was a whimsical character that looked both approachable, fun, and trustworthy.
 				.picture
@@ -101,9 +136,9 @@ html(lang='en')
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_illustration_character_module_set.png', height='auto', width='auto')
 					figcaption Parts of the character modular system
-			section.section
+			section#part3.section
 				h2.h2part Part 3 • Retesting the Redesign
-				h3 3.1 Conducting a comparative test
+				h3#three1 3.1 Conducting a comparative test
 				p Now came the big moment. It was time to test if the redesign had made the app a better match for its potential users. To do so, I talked to another 32 daters and meddlers showing them the new set of "lorem ipsum" artifacts.
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_test_participants_round2.png', height='auto', width='auto')
@@ -112,7 +147,7 @@ html(lang='en')
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_research_artifacts_round2.jpg', height='auto', width='auto')
 					figcaption Artifacts used in the second round of target audience research				
-				h3 3.2 Results
+				h3#three2 3.2 Results
 				p The test revealed an improvement on all fronts. Especially the alterations to the logo had changed how the target audience perceived it. The percentage of participants who associated it with a dating app increased from 0% to 68%. 
 				p Another big change was that now more than twice the number of participants related the app to the core values. Furthermore, the percentage of potential users who would use the app grew from 4% to 61%!
 				.picture
@@ -120,7 +155,7 @@ html(lang='en')
 					figcaption The test results from the second round interviews as compared to the first round.
 				p It was a celebratory moment and it was a joy to hear how excited many of the participants were about getting to use the product. My favorite moment was when one of the daters spontaneously started jotting down the names of all the friends she wanted to invite to meddle for her.
 				p But, celebration aside, there is still room for improvement, especially on the landing page and the app itself. Plus the new illustration style received mixed reviews. 20% liked them, while 18% disliked them, leaving 62% undecided or indifferent. This was a great concern and lead to the decision to not use the illustrations as much as planned. After all, it is easier to use stock photos in the long run for most purposes. However, overall it was a satisfactory change achieved within the given time.
-				h3 3.3 What I’ve learned
+				h3#three3 3.3 What I’ve learned
 				p The redesign was a fun and inspiring challenge that tought me a lot. Here are some of my main takeaways:
 				ul
 					li That overly focusing on one core value can askew a brand (which makes me wonder how my focus might have skewed the new brand).
@@ -132,13 +167,13 @@ html(lang='en')
 				video.top(controls='')
 					source(src='/static/images/Meddle/Meddle_Video_Magpie_v1-0-1.mp4', type='video/mp4')
 					|  Your browser does not support the video tag.
-			section.section
+			section#epilogue.section
 				h2.h2part Epilogue
 				p One day Laura was exploring her Facebook stream when she stumbled upon an ad for Meddle. “Do you suffer from Dating Fatigue?” it asked her. “Yes, I do,” she moaned thinking back on her last swiping nightmare. Intrigued she followed the link to learn more.
 				p Hence she found Meddle, which fitted her needs to a T. She outsourced her swiping to her closest friends and excitedly they jumped on the chance to meddle for her. Soon after, suggested dates started to roll in. Between them was Joseph, who got a thumbs up from all her friends. Laura trusted her friends and gave it a try. And Joseph turned out to be the perfect fit.
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_epilogue.jpg', height='auto', width='auto')
-			section.feature.flex
+			section#recommendation.feature.flex
 				picture.left
 					img.clip(src='/static/images/Meddle/Meddle_Peter_Leonard.jpeg') 
 				blockquote.quote

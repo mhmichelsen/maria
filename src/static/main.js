@@ -9,4 +9,14 @@ window.addEventListener('load', (event) => {
             preserveAspectRatio: 'xMinYMin slice',
         }
     });
+    lottie.loadAnimation({
+        container: document.querySelector('#meddle-logo-transformation-wrapper'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/static/motion/meddle-logo-transformation.json',
+        rendererSettings: {
+            preserveAspectRatio: 'xMinYMin slice',
+        }
+    });    
 })
