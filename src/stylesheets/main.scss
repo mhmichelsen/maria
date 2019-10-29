@@ -169,6 +169,9 @@ ol {
 b {
 	font-weight: 900;
 }
+i {
+	font-style: italic;
+}
 .center {
 	text-align: center;
 }
@@ -284,7 +287,7 @@ picture {
 	max-width: 100%;
 }
 .picture {
-	margin-top: 1rem;
+	margin: 1rem 0 0 0;
 }
 .full {
 	img {
@@ -296,6 +299,7 @@ img {
 }
 .w100 {
 	width: 100%;
+	margin: 0 auto;
 }
 .w80 {
 	width: 80%;
@@ -331,7 +335,7 @@ figcaption {
 	float:right;
 	max-width: 60%;
 	margin: 1rem 0 1.5rem 1rem;
-	@media (max-width: 600px) {
+	@media (max-width: 800px) {
 		float: none;
 		max-width: 100%;
 		margin: 1rem auto;
@@ -358,7 +362,7 @@ figcaption {
 	vertical-align: middle;
 }
 .smallhide /* used to hide content on smaller screens */{
-	@media (max-width: 600px) {
+	@media (max-width: 800px) {
 		display: none;
 	}
 }
@@ -368,7 +372,7 @@ figcaption {
 	}
 }
 .bighide /* used to hide content on biggest screens */{
-	@media (min-width: 600px) {
+	@media (min-width: 800px) {
 		display: none;
 	}
 }
@@ -376,6 +380,7 @@ video {
 	width: 100%;
 }
 .clip {
+	-webkit-clip-path: circle(50% at 50% 50%);
 	clip-path: circle(50% at 50% 50%);
 }
 
@@ -443,14 +448,6 @@ hr.line {
 	@media (max-width: 800px) {
 		padding: $space-reg /4;
 	}
-	h2 {
-		flex: 1;
-		max-width: 200px;
-		margin: 1rem 0;
-	}
-	p, ul, blockquote {
-		max-width: 500px;
-	}
 }
 .feature2{
 	width: 100vw;
@@ -494,6 +491,10 @@ hr.line {
 .recommendation {
 	margin: 2.5rem 1.5rem;
 }
+.recommendation-full {
+	max-width: 500px;
+	margin: 2.5rem auto;
+}
 .splash{
 	font-family: $font-primary;
 	font-size: 2rem;
@@ -507,17 +508,15 @@ hr.line {
 	position: absolute;
 	width: 6vw;
 	right: 21vw;
-	top: -280px;
+	top: -30vh;
 	z-index: 50;
 	-webkit-transition: .8s ease-in-out;
 	transition: .8s ease-in-out;
-	@media (max-width: 600px) {
-		width: 20vw;
-		top: -205px;
-		right: 1rem;
+	@media (max-width: 1000px) {
+		display: none;
 	}
 	&:hover {
-		top: -130px;
+		top: -10vh;
 	}
 }
 #hero {
@@ -540,7 +539,7 @@ hr.line {
 	// max-height: 800px;
 	padding: $space-reg $space-reg;
 	#descrip{
-		padding: $space-reg *1.5 $space-reg;
+		padding: $space-reg *2.5 $space-reg;
 		#elevator{
 			font-family: $font-primary;
 			font-size: 1.5rem;
@@ -552,13 +551,13 @@ hr.line {
 		padding: 2rem 1rem 1rem 1rem;
 		max-height: 700px;		
         #descrip {
-			padding: 10rem 1rem 1rem 5rem;
+			padding: $space-reg *2 $space-reg *1.5;
 			#elevator {
                 font-size: 1.125rem;
             }
         }
 	}
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
 		padding: 6rem 1rem 1rem 1rem;
 		text-align: center;		
         #descrip {
@@ -580,7 +579,10 @@ hr.line {
 /* portfolio list */
 #portfolio{
 	position: relative;
-	padding: 0 $space-reg *2.5;
+	padding: $space-reg $space-reg *2.5;
+	@media (min-width: 1600px) {
+        padding: $space-reg /2 $space-reg *4;
+    }
 	@media (max-width: 1024px) {
         padding: 1rem;
     }
@@ -598,7 +600,13 @@ hr.line {
 }
 
 .cover {
-	max-width: 40vw; 
+	max-width: 50%;
+	@media (min-width: 1600px) {
+		max-width: 100%;
+	}
+	@media (min-width: 1400px) {
+		max-width: 60%;
+	}
 	@media (max-width: 800px) {
 		max-width: 100%;
 	}
@@ -607,7 +615,7 @@ hr.line {
 	position: relative;
 	max-height: 100vh;
 	left: 0;   
-	margin: $space-reg *3 auto $space-reg *4 auto;
+	margin: $space-reg auto $space-reg *4 auto;
 	@media (max-width: 1366px) {
 		margin: $space-reg auto $space-reg *3.5 auto;
 	}    
@@ -734,23 +742,21 @@ hr.line {
 	top: 15vh;
 	max-width: 200px;
 	margin: 0 0 0 1.5rem;
+	-webkit-transition: .3s ease-in-out; /* For Safari 3.1 to 6.0 */
+	transition: .3s ease-in-out;
 	ol {
-		font-family: $font-primary;
-		font-size: .75rem;
 		list-style-type: none;
 		line-height: 1rem;
 		max-width: 400px;
 		li {
 			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
 		}
 	}
 	span.line1, .line2, .dot {
 		display: inline-block;
 		background-color: black;
 		vertical-align: baseline;
-		opacity: 20%;
+		opacity: .2;
 	}
 	span.line1 {
 		border-radius: 0 2px 2px 0;
@@ -766,19 +772,26 @@ hr.line {
 		border-radius: 2px;
 		width: 4px;
 		height: 4px;
-	}	
-	span.toc-item {
+	}
+	span.toc-item1 {
+		font-family: $font-primary;
+		font-size: .75rem;
+		font-weight: bold;
+	}
+	span.toc-item2 {
+		font-family: $font-primary;
+		font-size: .65rem;
+	}
+	span.toc-item1, .toc-item2 {
 		visibility: hidden;
-		overflow: hidden;
-		text-overflow: ellipsis;
 		max-width: 20px;
-		opacity: 50%;
+		opacity: .5;
 	}	
 	a:hover {
 		color: $licorice;
 	}
 	&:hover {
-		span.toc-item {
+		span.toc-item1, .toc-item2 {
 			visibility: visible;
 		}
 		span.line1, .line2, .dot {
