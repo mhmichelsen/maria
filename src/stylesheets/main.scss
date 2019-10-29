@@ -286,6 +286,11 @@ picture {
 .picture {
 	margin-top: 1rem;
 }
+.full {
+	img {
+		width: 100vw;
+	}
+}
 img {
 	max-width: 100%;
 }
@@ -767,7 +772,7 @@ hr.line {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		max-width: 20px;
-		opacity: 80%;
+		opacity: 50%;
 	}	
 	a:hover {
 		color: $licorice;
