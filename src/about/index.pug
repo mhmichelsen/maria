@@ -2,6 +2,21 @@ doctype html
 html(lang='en')
 	include ../templates/head.pug
 	body
-		section#intro.flex
+		section#intro
+			img.right.w40.clip(src='/static/images/MHMprofile.jpg', srcset='/static/images/MHMprofile.jpg 1x, /static/images/MHMprofile@0.5.jpg 0.5x, /static/images/MHMprofile@2x.jpg 2x ', alt='Maria Michelsen profile picture', height='auto', width='auto')
 			#descrip
-				h1 Hi there!
+				p#elevator Hi, I'm Maria 👋 I'm a Danish Product Designer living in San Francisco, California.<br/><br/><span class='smallhide'>Wanna know more. <br/>Read my story ⬇</span>
+		section.section
+			h2.h2part My Story
+			p When I was a kid, I fell in love with the power of storytelling. I was amazed at how it could change people's lives. How it changed mine. So much so that I got a master's degree in comparative literature and landed a sweet gig at the second largest publishing house in Denmark.
+			p Working there, I made a big impact on the digital department taking the ebook production to new levels that brought more than 10,000 quality ebooks a year to the readers. I explored technological possibilities in digital books, mingled with authors and editors, and advocated for accessibility in digital products. It was great, but something was missing for me.
+			p It took me a relocation of 5,455 miles to figure out what was lacking. Moving to San Francisco, I suddenly found myself surrounded by designers and engineers, entrepreneurs and visionaries. They were working on solving problems. And some of them were working on solving big problems, where the solutions had an immense impact on people's lives. <b>THAT</b> was what I was missing.
+			p Stories are amazing and they can open our eyes to new horizons. But they can also be the comfort that takes us away from reality. There are problems out there that stand in the way of people's happiness. Some might seem small, but they have a big impact. Like the small habits that lead to poor financial health. The small decisions that harm our environment. The daily anxiety that stands in the way of a good night's sleep.
+			p As a designer, I use storytelling every day in my problem-solving. I use it to align stakeholders to think of their users as real people. To craft thorough and coherent experiences that make people feel safe and understood. To balance the meticulous detail with the big narrative. And to find the overlooked and impactful problems that otherwise might go unnoticed.
+			p For me, storytelling is user experience, interaction, visuals, delight, motion, brand, product feel, trustworthiness, and so much more. It's what helps me to design with both my mind and my gut to find solutions that are both functional and speaks to the senses. And most of all, storytelling for me is the ultimate way to empower people to live better lives.
+		section.section
+			h2 Note on Site Design
+			p I designed and hand-coded this site using good ol' HTML and SCSS and sprinkled in some animated SVG's using Lottie. Fonts used Open Sans and Noto Serif JP. 
+			p Thanks to Calvin Woo, for technical support 🙂
+			hr
+	include ../templates/footer.pug			

@@ -221,6 +221,11 @@ hr {
 	border: none;
 	height: 1.5rem;
 }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
 /* Buttons */
 .CTA_high {
 	width: 360px;
@@ -489,7 +494,7 @@ hr.line {
 	}
 }
 .recommendation {
-	margin: 2.5rem 1.5rem;
+	margin: 1.5rem;
 }
 .recommendation-full {
 	max-width: 500px;
@@ -537,7 +542,7 @@ hr.line {
 #intro {
 	height: 100vh;
 	// max-height: 800px;
-	padding: $space-reg $space-reg;
+	padding: 10vh $space-reg;
 	#descrip{
 		padding: $space-reg *1.5 $space-reg;
 		#elevator{
@@ -559,7 +564,7 @@ hr.line {
 	}
     @media (max-width: 800px) {
 		padding: 6rem 1rem 1rem 1rem;
-		text-align: center;		
+		text-align: center;	
         #descrip {
 			padding: 2rem 1rem;
 			#elevator {
@@ -579,9 +584,9 @@ hr.line {
 /* portfolio list */
 #portfolio{
 	position: relative;
-	padding: $space-reg $space-reg *2.5;
+	padding: $space-reg $space-reg *2.5 0 $space-reg *2.5;
 	@media (min-width: 1600px) {
-        padding: $space-reg /2 $space-reg *4;
+        padding: $space-reg /2 $space-reg *4 0 $space-reg *4;
     }
 	@media (max-width: 1024px) {
         padding: 1rem;
@@ -679,7 +684,7 @@ hr.line {
 #contact {
 	padding: 0 auto;
 	width: 80vw;
-	margin: .25rem auto;
+	margin: .5rem auto;
 	ul {
 		margin: $space-reg /2 auto;
 		padding: 0;
@@ -757,16 +762,14 @@ hr.line {
 		background-color: black;
 		vertical-align: baseline;
 		opacity: .2;
+		border-radius: 0 1px 1px 0;
+		height: 2px;
 	}
 	span.line1 {
-		border-radius: 0 2px 2px 0;
 		width: 20px;
-		height: 3px;
 	}
 	span.line2 {
-		border-radius: 0 1px 1px 0;
 		width: 10px;
-		height: 2px;
 	}
 	span.dot {
 		border-radius: 2px;
