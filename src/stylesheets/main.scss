@@ -180,10 +180,13 @@ i {
 	font-size: .75rem;
 	color: $faded;
 	font-weight: normal;
+	@media (max-width: 1000px){
+		text-align: center;
+	}
 }
 .right-align {
 	text-align: right;
-	@media (max-width: 800px){
+	@media (max-width: 1000px){
 		text-align: left;
 	}
 }
@@ -407,10 +410,10 @@ video {
 	h3, h4 {
 		margin: 0;
 	}
-	@media (max-width: 700px) {
+	@media (max-width: 1000px) {
 		display: block;
 		margin: 1rem 0;
-		div, ul, picture, nav {
+		div, ul, picture, nav, a, p {
 			flex: none;
 			margin: 0 auto;
 		}
@@ -430,7 +433,7 @@ video {
 			margin-left: $space-reg /3;
 		}
 	}
-	@media (max-width: 800px) {
+	@media (max-width: 1000px) {
 		padding: 1rem 1rem;
 		background: $snow;
 		z-index: 100;
@@ -468,7 +471,7 @@ hr.line {
 .section {
 	max-width: 700px;
 	margin: $space-reg /2 auto;
-	@media (max-width: 1100px) {
+	@media (max-width: 800px) {
 		margin: $space-reg /2 2rem;
 	}
 	@media (max-width: 550px) {
@@ -558,7 +561,7 @@ hr.line {
         #descrip {
 			padding: $space-reg *1.5 $space-reg *1.5;
 			#elevator {
-                font-size: 1.125rem;
+                font-size: 1.25rem;
             }
         }
 	}
@@ -686,6 +689,9 @@ hr.line {
 	width: 80vw;
 	margin: .5rem auto;
 	ul {
+		font-family: $font-primary;
+		color: $faded;
+		font-size: 1rem;
 		margin: $space-reg /2 auto;
 		padding: 0;
 		text-align: center;
@@ -711,8 +717,8 @@ hr.line {
 			margin: 1rem;
 		}
 		ul li {
-			display: block;
-			padding: 1rem;
+			// display: block;
+			line-height: 48px;
 		}
 	}
 }
@@ -827,4 +833,48 @@ h3.bloom {
 }
 .white {
 	background-color: white;
+}
+
+/** About Page **/
+#intro-about {
+	// height: 100vh;
+	// max-height: 800px;
+	margin: $space-reg *1 $space-reg;
+	#descrip{
+		padding: $space-reg /2 $space-reg;
+		#elevator{
+			font-family: $font-primary;
+			font-size: 1.5rem;
+			font-weight: light;
+			max-width: 32vw;
+		}      
+	}
+    @media (max-width: 1366px) {
+		padding: 2rem 1rem 1rem 1rem;
+		// max-height: 700px;		
+        #descrip {
+			padding: 0 $space-reg;
+			#elevator {
+                font-size: 1.25rem;
+            }
+        }
+	}
+    @media (max-width: 1000px) {
+		// height: auto;
+		padding: 0 1rem;
+		text-align: left;	
+        #descrip {
+			padding: 1rem .5rem 0 .5rem;
+			#elevator {
+				font-size: 1.125rem;
+				max-width: 100vw;
+            }
+        }
+	}
+    // @media (max-width: 350px) {
+    //     padding: 2rem .5rem .5rem .5rem;
+    //     #descrip {
+	// 		padding: 2rem 1rem 1rem .5rem;
+    //     }
+    // }	
 }
