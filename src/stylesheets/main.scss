@@ -839,7 +839,7 @@ h3.bloom {
 #intro-about {
 	// height: 100vh;
 	// max-height: 800px;
-	margin: $space-reg *1 $space-reg;
+	margin: $space-reg $space-reg;
 	#descrip{
 		padding: $space-reg /2 $space-reg;
 		#elevator{
@@ -848,6 +848,9 @@ h3.bloom {
 			font-weight: light;
 			max-width: 32vw;
 		}      
+	}
+	@media (min-width: 800px) {
+		height: 70vh;
 	}
     @media (max-width: 1366px) {
 		padding: 2rem 1rem 1rem 1rem;
