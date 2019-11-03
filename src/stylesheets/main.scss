@@ -125,20 +125,27 @@ p {
 	}
 }
 a {
-	text-decoration: none;
 	color: $licorice;
-	-webkit-transition: .3s; /* For Safari 3.1 to 6.0 */
-	transition: .3s;
+	text-decoration: none;
+	-webkit-transition: .2s; /* For Safari 3.1 to 6.0 */
+	transition: .2s;
+}
+a.a-inline {
+	color: $faded;
+	text-decoration: none;
+	-webkit-transition: .2s; /* For Safari 3.1 to 6.0 */
+	transition: .2s;
 }
 a:hover {
 	color: $sunshine;
 }
 a img {
-	-webkit-transition: transform .3s ease-out; /* For Safari 3.1 to 6.0 */
-	transition: transform .3s ease-out;	
+	-webkit-transition: transform .2s ease-in-out; /* For Safari 3.1 to 6.0 */
+	transition: transform .2s ease-in-out;	
+	transform-origin: bottom;
 }
 a img:hover {
-	transform: scale(1.03);
+	transform: scale(1.125) translate(0%, -2%);
 }
 ul {
 	font-family: $font-secondary;
@@ -203,18 +210,20 @@ ul.tags {
 	padding-top: $space-reg /4;
 }
 blockquote {
-	margin: 1rem 0 3rem 0;
+	margin: 0 1.5rem;
 	p.quote {
 		font-family: $font-primary;
-		font-size: 1rem;
-		font-weight: 500;
-		padding-left: -50px;
+		font-size: .9rem;
+		margin: 0;
+		// padding-left: -50px;
 	}
 	p.source {
 		font-family: $font-primary;
-		font-size: 1rem;
+		color: $faded;
+		font-size: .75rem;
 		font-weight: bold;
 		text-align: right;
+		margin: 1rem 0 2rem 0;
 	}
 }
 .inactive {
@@ -246,8 +255,8 @@ hr {
 	border-radius: 8px;
 	margin-top: 2em;
 	padding: 1.25em 4em;
-	-webkit-transition: .5s ease-out; /* For Safari 3.1 to 6.0 */
-	transition: .5s;	
+	-webkit-transition: .3s ease-out; /* For Safari 3.1 to 6.0 */
+	transition: .3s;	
     @media (max-width: 800px) {
 		width: 80vw;
 		height: 60px;
@@ -269,10 +278,10 @@ hr {
 	// border-bottom: 3px solid ;
 	font-weight: 600;
 	text-transform: uppercase;
-	-webkit-transition: .5s; /* For Safari 3.1 to 6.0 */
-	transition: .5s;
+	-webkit-transition: .2s; /* For Safari 3.1 to 6.0 */
+	transition: .2s;
 	&:hover {
-		letter-spacing: 1px;
+		letter-spacing: .25rem;
 	}
 }
 .CTA_low {
@@ -284,8 +293,8 @@ hr {
 	align-items: center;
 	font-weight: 400;
 	text-transform: uppercase;
-	-webkit-transition: .5s; /* For Safari 3.1 to 6.0 */
-	transition: .5s;
+	-webkit-transition: .2s; /* For Safari 3.1 to 6.0 */
+	transition: .2s;
 	&:hover {
 		letter-spacing: 2px;
 	}	
@@ -395,16 +404,17 @@ video {
 /* Flex */
 .flex {
 	display: flex;
-    div, ul, picture, nav {
-        flex:1;
-	}
+    // div, ul, picture, nav {
+    //     flex:1;
+	// }
 	.picture {
-		padding: 0 1rem;
+		// padding: 0 1rem;
 		margin: 0;
+		// width: 100%;
 	}
     img{
-		max-width: 70%;
-		max-height: 100%;
+		// max-width: 70%;
+		// max-height: 100%;
 		padding: 0;
 	}
 	h3, h4 {
@@ -444,8 +454,17 @@ video {
 }
 /****** Content Elements ******/
 hr.line {
-	border-top: 3px solid $licorice;
-	border-style: solid;
+	border-top: 2px solid $faded;
+}
+hr.line-right {
+	border-top: 2px solid $faded;
+	border-right: 2px solid $faded;
+	opacity: .2;
+}
+hr.line-left {
+	border-bottom: 2px solid $faded;
+	border-left: 2px solid $faded;
+	opacity: .2;
 }
 .feature{
 	width: 100vw;
@@ -492,12 +511,16 @@ hr.line {
 	}
 }
 #testimonials {
-	@media (max-width: 1024px) {
-		margin: 1rem;
-	}
+	margin: 1rem;
+	// @media (max-width: 1024px) {
+	// 	margin: 1rem;
+	// }
 }
 .recommendation {
-	margin: 1.5rem;
+	margin: 0 5rem 2rem 5rem;
+	@media (max-width: 1000px) {
+		margin: 1rem .5rem;
+	}
 }
 .recommendation-full {
 	max-width: 500px;
@@ -518,8 +541,8 @@ hr.line {
 	right: 21vw;
 	top: -30vh;
 	z-index: 50;
-	-webkit-transition: .8s ease-in-out;
-	transition: .8s ease-in-out;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 	@media (max-width: 1000px) {
 		display: none;
 	}
@@ -687,22 +710,18 @@ hr.line {
 #contact {
 	padding: 0 auto;
 	width: 80vw;
-	margin: .5rem auto;
+	margin: 1rem auto 0 auto;
 	ul {
 		font-family: $font-primary;
 		color: $faded;
 		font-size: 1rem;
-		margin: $space-reg /2 auto;
+		margin-top: $space-reg /2;
 		padding: 0;
 		text-align: center;
 	}
 	ul li {
 		display: inline;
 		padding: $space-reg /2;
-		img {
-			height: 30px;
-			width: 30px;
-		}
 	}
 	@media (max-width: 1024px) {
 		ul {
@@ -714,11 +733,12 @@ hr.line {
 	}	
 	@media (max-width: 600px) {
 		ul {
-			margin: 1rem;
+			margin: 1rem 0;
 		}
 		ul li {
 			// display: block;
 			line-height: 48px;
+			padding: .5rem;
 		}
 	}
 }
@@ -753,8 +773,6 @@ hr.line {
 	top: 15vh;
 	max-width: 200px;
 	margin: 0 0 0 1.5rem;
-	-webkit-transition: .3s ease-in-out; /* For Safari 3.1 to 6.0 */
-	transition: .3s ease-in-out;
 	ol {
 		list-style-type: none;
 		line-height: 1rem;
