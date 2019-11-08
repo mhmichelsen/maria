@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open Sans');
-@import url('https://fonts.googleapis.com/css?family=Noto Serif JP');
+// @import url('https://fonts.googleapis.com/css?family=Noto Serif JP');
 /* reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -46,7 +46,7 @@ table {
 }
 /* variables */
 $font-primary: "Open Sans",Helvetica, sans-serif;
-$font-secondary: "Noto Serif JP", Times, serif;
+// $font-secondary: "Noto Serif JP", Times, serif;
 $licorice: #0D0000;
 $snow: #FFFCF7;
 $sunshine: #ffb526;
@@ -115,7 +115,7 @@ p.subtitle {
 	}	
 }
 p {
-	font-family: $font-secondary;
+	// font-family: $font-secondary;
 	font-size: 1.15rem;
 	font-weight: 200;
 	margin-top: 1rem;
@@ -148,7 +148,7 @@ a img:hover {
 	transform: scale(1.125) translate(0%, -2%);
 }
 ul {
-	font-family: $font-secondary;
+	// font-family: $font-secondary;
 	font-size: 1.15rem;
 	padding: 1rem;
 	line-height: 2;
@@ -161,7 +161,7 @@ ul {
 	}
 }
 ol {
-	font-family: $font-secondary;
+	// font-family: $font-secondary;
 	list-style-type: decimal;
 	font-size: 1.15rem;
 	padding: 1rem;
@@ -404,9 +404,9 @@ video {
 /* Flex */
 .flex {
 	display: flex;
-    // div, ul, picture, nav {
-    //     flex:1;
-	// }
+    div, ul, picture, nav {
+        flex:1;
+	}
 	.picture {
 		// padding: 0 1rem;
 		margin: 0;
