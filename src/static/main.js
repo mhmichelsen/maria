@@ -1,22 +1,28 @@
 window.addEventListener('load', (event) => {
-    lottie.loadAnimation({
-        container: document.querySelector('#gh-onboarding-image-wrapper'),
+    const defaultOptions = {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '/static/motion/gh-onboarding.json',
         rendererSettings: {
             preserveAspectRatio: 'xMinYMin slice',
+        }
+    }
+
+    const imageOptions = [
+        {
+            container: document.querySelector('#gh-onboarding-image-wrapper'),
+            path: '/static/motion/gh-onboarding.json',
+        },
+        {
+            container: document.querySelector('#meddle-logo-transformation-wrapper'),
+            path: '/static/motion/meddle-logo-transformation.json',
+        }
+    ];
+    
+    imageOptions.forEach((imageOptions) => {
+        const options = { ...defaultOptions, ...imageOptions };
+        if (options.container) {
+            lottie.loadAnimation(options);
         }
     });
-    lottie.loadAnimation({
-        container: document.querySelector('#meddle-logo-transformation-wrapper'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: '/static/motion/meddle-logo-transformation.json',
-        rendererSettings: {
-            preserveAspectRatio: 'xMinYMin slice',
-        }
-    });    
 })
