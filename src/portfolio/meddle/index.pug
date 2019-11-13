@@ -41,11 +41,10 @@ html(lang='en')
 		section#project
 			picture.full
 				img(src='/static/images/Meddle/Meddle_rebranding_cover.jpg', srcset='/static/images/Meddle/Meddle_rebranding_cover.jpg 1x, /static/images/Meddle/Meddle_rebranding_cover@2x.jpg 2x', alt="Meddle Case Study cover" height='auto', width='auto')
-			section.section.title
-				#meddle.description
+			section#meddle.section.title
 					h1 Matching a Dating App with Its Target Audience
 					p.subtitle – a case study about the rebranding of Meddle
-			section#prologue.section
+			section.section
 				h2.h2part Prologue
 				p Laura is a 28-year-old high school teacher living in Seattle. She just came back from a disappointing date and is wondering if she will ever find someone right for her. Curled up on the couch, she absentmindedly scrolls along on Facebook. She is still preoccupied with thoughts about her dating life and ponders “If only I could get some help!”
 				p Ironically enough she just missed an ad for a new dating app, which would have let her outsource the task of picking dates to her friends. If she had noticed it, she would have said: “Wow, this is perfect.” But she missed it completely.
@@ -173,13 +172,16 @@ html(lang='en')
 				p Hence she found Meddle, which fitted her needs to a T. She outsourced her swiping to her closest friends and excitedly they jumped on the chance to meddle for her. Soon after, suggested dates started to roll in. Between them was Joseph, who got a thumbs up from all her friends. Laura trusted her friends and gave it a try. And Joseph turned out to be the perfect fit.
 				.picture
 					img(src='/static/images/Meddle/Meddle_rebranding_epilogue.jpg', height='auto', width='auto')
-			section#recommendation.feature
-				picture
-					img.clip(src='/static/images/Meddle/Meddle_Peter_Leonard.jpeg') 
-				blockquote.quote
-					p.quote &quot;It's been a pleasure to work with Maria. She's a great listener, who made sure to understand my company's values and goals before producing any visuals. <br/><br/>Then she managed to capture the look and feel we're going for through the characters and video she created for us. She's a lot of fun to collaborate with, always coming up with great ideas when we're stuck creatively.&quot;
-					p.source Peter Leonard<br/>CEO, Meddle
-			#projectNav.section.flex
+			section.feature
+				hr.line-right
+				.recommendation
+					picture.picture.top
+						img.w80(src='/static/images/Meddle/Meddle_Peter_Leonard.jpeg') 
+					blockquote.item.top
+						p.quote &quot;It's been a pleasure to work with Maria. She's a great listener, who made sure to understand my company's values and goals before producing any visuals. <br/><br/>Then she managed to capture the look and feel we're going for through the characters and video she created for us. She's a lot of fun to collaborate with, always coming up with great ideas when we're stuck creatively.&quot;
+						p.source Peter Leonard<br/>CEO, Meddle
+				hr.line-left
+			#projectNav.section
 				nav
 					a(href='/portfolio/bloom') ← Prev Case Study
 				nav.right-align

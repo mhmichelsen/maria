@@ -4,252 +4,129 @@ html(lang='en')
 	body.white
 		section#project
 			picture.full
-				img(src='/static/images/Bloom/coverWide.png', srcset='/static/images/Bloom/coverWide.png 1x, /static/images/Bloom/coverWide@2x.png 2x' alt='')
-			section.section.title
-				#bloom.description
+				img(src='/static/images/Bloom/Bloom_cover.png', srcset='/static/images/Bloom/Bloom_cover.png 1x, /static/images/Bloom/Bloom_cover@2x.png 2x' alt='')
+			section#bloom.section.title
 					h1 Reinventing Investing
-					p.subtitle – a case study about the creation of the investment app Bloom
-			section#problem.section.top
-				h2.h2part The Problem
-				p
-					| Most people are scared to invest. When they do, they often lose their money. Just ask the average investor, who earns 2.6% per year.
-				.picture
-					img(src='/static/images/Bloom/AverageInvestorChart.svg')
-					figcaption
-						| 20-year annualized returns by asset class (1998 – 2017). Source: J.P. Morgan Asset Management
-				p
-					| Why? There’s a high learning curve to understanding how to value stocks as businesses.
-				p
-					| Investors today rely on charts, their peers, and the news to determine whether a stock is a right buy. Current financial apps overwhelm you with tons of financial metrics. Financial news apps stream minute by minute news updates, expecting you to know what to do.
-				p
-					| Successful investors know their companies and industries deeply. Even for them, it still requires arduous research to understand a company’s financials, strategy, and valuation.
-			section.section
-				h2.h2part The Solution
-				p
-					| Facing this problem, we asked ourselves — how can we help the 86% who don’t invest today? How do we help more people invest in the best ideas? How do we help them take part in the wealth creation from innovation?
-				p
-					| Whatever we do, it has to build trust. It needs to protect you and do what’s in your best interest, not your brokers’. Next, it has to be simple. The stock market is a financial opportunity that should be available for everyone. Finally, it has to promote growth. We want to guide our users on the path to financial success.
-				p
-					| So we followed these principles, and we built something brand new. Bloom helps you do three things:
-				.flex.top
-					div
-						.picture
-							img(src='/static/images/Bloom/FindCompany.svg')
-							p
-								b Invest in Great Companies
-								br
-								| Find market leaders and invest in companies based on your beliefs.
-					div
-						.picture
-							img(src='/static/images/Bloom/Knowledge.svg')
-							p
-								b Understand the Stock
-								br
-								| Invest using financial data and company strategy.
-					div
-						.picture
-							img(src='/static/images/Bloom/Invest.svg')
-							p
-								b Grow as an Investor
-								br
-								| Learn exactly how to find high-quality stocks.
-				p.top 
-					| The following is a case study of the design process from the preliminary understanding of our users needs over product ideations and wireframing to building the product.
-			section.feature
-				h2.h2part My Role
+					p.subtitle – a product design case study about the creation of Bloom
+			section#problem.section
+				h2.h2part The Project
+				p <b>Problem:</b> Research shows that millennials are investing far less than the previous generations. This might hurt them greatly in the long run. However, the learning curve to investing is steep and good tools that help users grow as investors are missing from the market.
+				div.flex4
+					p.item <b>Product vision:</b> <br/>Bloom is an investment tool that empowers people to become better investors.
+					p.item <b>Team structure:</b> <br/>Product manager, researcher, product designer (me), and engineer.
+					p.item <b>My role:</b> <br/>UX, UI, branding, visual design, and motion.
+					p.item <b>Time:</b> <br/>2018-2019
+				h2.h2part Chapter 1 – Empathy and Research
+				h3 Finding the root causes with interviews
+				p First off, we needed to understand why millennials aren’t investing. We looked into the research that was available on the market. Then, to really understand the feelings and thoughts behind the behavior, we conducted a series of qualitative interviews.
+				p All in all, we learned that there were four overarching causes that held millennials back from investing: fear, lack of funds, lack of knowledge, and lack of appeal.
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_Diverge.png', srcset='/static/images/Bloom/Bloom_Diverge.png 1x, /static/images/Bloom/Bloom_Diverge@2x.png 2x' alt='')
+					figcaption Issue tree based on qualitative interviews
+				h3 Building personas
+				p We used the data from the interviews to build personas that could help us keep a user-centered approach while iterating on the product.
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_Personas.png', srcset='/static/images/Bloom/Bloom_Personas.png 1x, /static/images/Bloom/Bloom_Personas@2x.png 2x' alt='')
+					figcaption Bloom’s personas as a spectrum from beginner to pro
+				p Our target audience is Comfy Carl and Diligent Dana. They both have some financial experience and are looking to grow as investors. However, they are different when it comes to comfort level, perspective, motivation, and what they are looking for in an investment tool. We keep the two other personas, Nina Newbie (the beginner) and Advisor Alex (the pro), in mind in our development to ensure future scalability in the product functionality.
+				h3 Brainstorming solutions
+				p Now, that we had a better understanding of the problem space, it was time to find a solution. For that purpose, I led a brainstorming session where we explored our data and concept ideas.
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_Brainstorming_Converge.jpg', srcset='/static/images/Bloom/Bloom_Brainstorming_Converge.jpg 1x, /static/images/Bloom/Bloom_Brainstorming_Converge@2x.jpg 2x' alt='')
+					figcaption Brainstorming session and the issue tree showing our journey to a product concept
+				p Through our explorations, we narrowed the scope to one product based on three of the four causes that we had uncovered in the research. We developed the following product focuses to guide our work:
 				ul
-					li
-						b UX/UI Design
-						|  – created design solutions in wireframe and high-fidelity prototypes.
-					li
-						b Visual Design
-						|  – developed the product's brand identity, including illustrations and style guide system.
-					li
-						b User Research
-						|  – conducted quantitative and qualitative user interviews with the target audience.
-					li
-						b Empathy + Storytelling
-						|  – utilized user journeys, storyboarding, and personas to ensure that the key customer's needs were fully understood and taken into account in all design decisions.
-					li
-						b Cross-Functional Leadership
-						|  – collaborated closely with Engineers and Product Managers.
-			section.section.top
-				h2.h2part The Design and Development Process
-				p
-					| For our design process, we chose to follow the Design Thinking process because it is human-centered, solution-focused, flexible, iterative and fits well with the agile methodology.
-				.picture.w80
-					img(src='/static/images/Bloom/DesignThinking.svg')
-					figcaption The steps of the Design Thinking Process
-				h3.bloom Empathize – Research and User Interviews
-				p
-					| For any product, the most crucial factor for a robust design foundation is to understand the users and their needs. To get a better understanding of which users would benefit the most from a new investment tool, we conducted research to establish our target audience.
-				h4 Defining the Target Audience
-				p
-					| Research showed that Millennials by far was the group of people who were holding back on investing:
-				.flex
-					div
-						blockquote
-							p.quote “66% of Millennials say investing in the stock market is scary or intimidating.”
-							p.source – Ally Financial survey
-						blockquote
-							p.quote
-								| “42% of Millennials are investing conservatively, compared with 38% of Generation X investors and 23% of baby boomers.”
-							p.source – Fidelity survey
-					div
-						blockquote
-							p.quote
-								| “Millennials hold 25% of their investments in cash, compared to 19% of investors overall.”
-							p.source – Charles Schwab and Co
-						blockquote
-							p.quote
-								| “Some Millennials may be putting their retirement security at risk by shying away from stocks now.”
-							p.source – Forbes
-				p
-					| Therefore, in our search to define our core target audience, we decided to focus on Millennials with a range from people with little to intermediate experience with investing. The next step was to interview this group to get a better understanding of their needs and restrictions.
-				h4 User Interviews and Persona Development
-				p
-					| I conducted qualitative user interviews with the target audience to get a better understanding of their investments needs, goals, and experience. I also included interviews with people who had higher investment experience to give me insight into which kind of skills we would like our users to develop using our product.
-				p
-					| From the collected data I distilled the user interviews into 4 specific personas that represent our target audience:
-				.flex.top
-					.picture
-						img(src='/static/images/Bloom/Persona1.svg')
-						p
-							b Nina the Newbie
-							br
-							| New to investing and seeking a way to learn more and to figure out how to start investing.
-					.picture
-						img(src='/static/images/Bloom/Persona2.svg')
-						p
-							b Comfy Carl
-							br
-							| An intermediate investor, who feels insecure about investing and who fears he will emotionally based investments.
-				.flex.top
-					.picture
-						img(src='/static/images/Bloom/Persona3.svg')
-						p
-							b Diligent Dana
-							br
-							| A more experienced investor, who is seeking a way to invest in better companies based on beliefs.
-					.picture
-						img(src='/static/images/Bloom/Persona4.svg')
-						p
-							b Alex Advisor
-							br
-							| A professional investor looking for investment tools to recommend to less proficient investors.
-				p.top
-					| For our MVP we would focus on Carl and Dana as our core users while keeping both Nina and Alex in mind to ensure future scalability in the product functionality.
-				h4 Storyboarding and User Journeys
-				p
-					| I utilized user journeys and storyboarding for each of our defined personas to ensure that our key customer's needs were fully understood and taken into account in all design decisions.
-				.picture
-					img(src='/static/images/Bloom/Carl_story.gif')
-				h3.bloom.top Defining the Problem
-				p
-					| What are the issues that are holding Millennials back from investing? In the next step in our process, we dived more into this question to investigate and define what the underlying issues were behind the problem.
-				h4 Brainstorming and Issue Tree
-				p
-					| Based on the research and the conducted user interviews, we held a team brainstorming session where we used different techniques to uncover the core issues. I collected our findings in an issue tree, which would give us a solid foundation on which to base our solution ideation.
-				.picture.w80
-					img(src='/static/images/Bloom/Define.svg')
-					figcaption Issue tree of the blockers that are holding Millennials back from investing
-				h3.bloom Ideation
-				p
-					| Now that we had a better understanding of what the issues are that are holding Millennials back from investing, it was time to start exploring ideas for a product that could help alleviate as many of these issues as possible.
-				h4 Brainstorming
-				p
-					| Using the issue tree, we started exploring possible solutions. We let our minds run free to ensure that no idea was left unturned – even the idea of a comforting drone was on the table at some point.
-				.flex
-					.picture.smallhide
-						img(src='/static/images/Bloom/Post-its-1.jpg')
-					.picture.smallhide
-						img(src='/static/images/Bloom/Post-its-2.jpg')
-					.picture
-						img(src='/static/images/Bloom/Post-its-3.jpg')
-				p
-					| We sorted our solution ideas according to the issues and looked into which ideas could be combined into a single product. Multiple approaches were explored until we found a product, which key features we believed could bring substantial value to our target audience.
-				.picture.w80
-					img(src='/static/images/Bloom/ideation.svg')
-					figcaption Solution ideation which lead to the final product idea.
-				h3.bloom Prototype - Test – Repeat
-				p
-					| Using the iterative process, we moved on to the product development. I provided lo-fi and hi-fi wireframes as well as interactive prototypes that we continuous used to test our solutions on users to ensure that we were building the right product and that the user flow was as smooth as possible.
-				.picture.w80
-					img(src='/static/images/Bloom/ProductionFlow.svg')
-					figcaption The iterative development flow
-				p
-					| For example, in the beginning, our vision was to have a explore page which included two explorative features: search and curated categories. Over time usability testing showed us that having 2 functionalities on one screen created confusion and made the screen appear too cluttered. In the first design release, the two features were, therefore, split into two separate entities accessible from the bottom navigation bar.
-				.picture.w80
-					img(src='/static/images/Bloom/ExploreEvolution.png', srcset='/static/images/Bloom/ExploreEvolution.png 1x, /static/images/Bloom/ExploreEvolution@0.5x.png 0.5x, /static/images/Bloom/ExploreEvolution@2x.png 2x ', alt='Moodboard', height='auto', width='auto')
-					figcaption The evolution of the Discover page based on usability testing
-			section.section
-				h2.h2part Visual Design
-				p
-					| The visual design of the product was guided by two sets of core values, which would ensure consistency across the product and that all design decisions were based on the same guidelines. The value sets are:
-				p 
-					b Bloom's Product Philosophy:
-				ul
-					li
-						b Trust
-						|  – We do what's in your best interest, not your bankers'.
-					li
-						b Growth
-						|  – We help you become a better investor.
-					li
-						b Simplicity
-						|  – Accessible for any skill level.
-				p
-					b Bloom's Brand Design Spine:
-				ul
-					li
-						b Vision
-						|  – Development is driven by strong insight into the user base and the future.
-					li
-						b Principles
-						|  – Things should be built by the principles that govern a user's lives
-					li
-						b Lovable
-						|  – The product should delight and inspire. It's not something off the shelf.
+					li We will address fear by giving clear indicators and expert advice.
+					li We will make investing feel more appealing with a more inclusive brand and less lingo.
+					li We will make the users grow their knowledge gradually with educational content and by making them more informed with curated news.
+				h3 Storyboarding to understand the user’s journey
+				p I used storyboarding to explore what we wanted our users to feel when using our product.
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_storyboard.jpg', srcset='/static/images/Bloom/Bloom_storyboard.jpg 1x, /static/images/Bloom/Bloom_storyboard@2x.jpg 2x' alt='')
+					figcaption Comfy Carl’s story as told in a storyboard
+				h3 Prototyping and Testing
+				p As we started exploring and building specific features, we continuously tested solutions on potential users. For this purpose, we built low-fidelity prototypes in Balsamiq, which could be used by all team members. As our work progressed, I started developing high-fidelity prototypes in Adobe XD.
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_prototyping.png', srcset='/static/images/Bloom/Bloom_prototyping.png 1x, /static/images/Bloom/Bloom_prototyping@2x.png 2x' alt='')
+					figcaption Low-fidelity and high-fidelity prototypes
+				h2.h2part Part 2 – Building the Brand
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_Brandboard.png', srcset='/static/images/Bloom/Bloom_Brandboard.png 1x, /static/images/Bloom/Bloom_Brandboard@2x.png 2x' alt='')
+				p Since the primary focus was to tackle fear, knowledge, and appeal, I focused on creating a calming, trustworthy, and engaging brand. For the user interface and visual design, I focused on simplicity, clarity, and delight.
 				h3 Logo
-				p
-					| The logo mark is inspired by the core of Bloom's name: the blooming of a flower. As a flower blooms its petals grow bigger and brighter in hue. In the same manner, the three blooming spheres of Bloom grows bigger and brighter in color representing the user as he or she grows their investment skills.
-				.picture.w80
-					img(src='/static/images/Bloom/logo.svg')
-				p
-					| The three spheres' shapes are repeated in the three round spaces in the b and o's of the text mark. The overall shapes are kept organic to further underline the blooming feel of the brand, while square edges build in a harmonious contrast in the overall logo.
-				h3 Color Palette and Typography
-				p
-					| The color palette was picked to make the product stand out compared to the competition by using a warm petrol blue as the primary color and contrasting it with lively orange. A range of black, white and gray tones are used to add a more neutral base to the palette. Red and green are crucial colors for adding visual information cues to the user about positive and negative trends in a stock's information.
-				.flex.top
-					.picture
-						img(src='/static/images/Bloom/Colors.svg', height='350')
-					.picture
-						img(src='/static/images/Bloom/Type.svg', height='350')
-				p
-					| Maven Pro and Roboto Condensed are used as the typographical pair in the design system. Maven Pro is chosen for it's warm and organic appearance, which matches well with Bloom's core values. It is used for heading. Roboto Condensed is selected because it's more strict and straightforward appearance provides an excellent contrast to Maven Pro. It is, furthermore, very legible and suitable for displaying digits, which is an essential factor in an investment app. It is used for paragraphs and all other textual elements.
-				h3 Illustrations
-				p
-					| I chose to use illustrations for all visual elements. It makes the brand stand out compared to competitors who either avoids visual content or use stock photos.
-				.picture
-					img(src='/static/images/Bloom/Illustrations.svg')
-				h2 The Product
-				h3 The Onboarding Flow
-				.picture
-					img(src='/static/images/Bloom/Onboarding.svg')
-				h3 The App
-				.picture
-					img(src='/static/images/Bloom/App.svg')
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_logo.png', srcset='/static/images/Bloom/Bloom_logo.png 1x, /static/images/Bloom/Bloom_logo@2x.png 2x' alt='')
+					figcaption Top: Bloom logo and text mark.<br/>Bottom from left: white version, logo mark used in app icon, and logo mark used in the user interface.				
+				p The logo mark was inspired by our name. As a flower blooms, its petals grow bigger and brighter in hue. In the same manner, the three spheres of Bloom grow bigger and brighter as our users become better investors. The rounded shapes of the logo is repeated in the text mark which gives it an approachable feel, while the square edges adds a trustworthy base to the name.
+				h3 Colors
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_colors.svg')
+				p I selected the primary colors, a warm blue and a lively orange, to differentiate Bloom from the more anemic branding of the competition. Red and green are crucial colors for adding visual information cues to the user about major positive and negative trends. To make the product feel more calming and easier to scan, I added a mid-tone grey as indicator for minor trends which makes the major trends stand out more.
+				h3 Typography
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_typography.png', srcset='/static/images/Bloom/Bloom_typography.png 1x, /static/images/Bloom/Bloom_typography@2x.png 2x' alt='')
+				p For the typography, I chose Helvetica Now Display and Text. They are both built on Helvetica, which is widely familiar. This lends the fonts a sense of trustworthiness and transparency. With the typefaces’ new design it is made slightly more contemporaty and is adapted to perform better on screens.
+				h3 Iconography and illustrations
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_iconography_illustrations.png', srcset='/static/images/Bloom/Bloom_iconography_illustrations.png 1x, /static/images/Bloom/Bloom_iconography_illustrations@2x.png 2x' alt='')
+					figcaption Top: Minimalistic icons with personality<br/>Middle and bottom: selection of illustrations used to add delight				
+				p For the user interface, I designed icons that are minimalistic but still have a personality. I created illustrations intended to enable moments of delight in the app and to increase engagement with marketing content. They bring additional life and quirkiness to the brand. Plus, they help make the brand stand out from the competitors, who use stock photos or avoid visual content altogether.
+				h3 Tools and Bloom’s design system
+				p My primary design tool was Adobe XD, which I used to build wireframes, high-fidelity prototypes, and core motion. I designed the illustrations and icons in Adobe Illustrator. I built a design system to ensure consistency across the product, the tools, and to keep track of design decisions.
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_Design_System.png', srcset='/static/images/Bloom/Bloom_Design_System.png 1x, /static/images/Bloom/Bloom_Design_System@2x.png 2x' alt='')
+					figcaption Bloom’s Design System
+				h2.h2part Part 3 – The Product
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_app.png', srcset='/static/images/Bloom/Bloom_app.png 1x, /static/images/Bloom/Bloom_app@2x.png 2x' alt='')
+					figcaption A selection of screens from the final product
+				h3 App flow map
+				p It can be hard to maintain a helicopter view of a product as it grows more complex. To facilitate high level architectural conversations, I created a flow map of the app.
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_flow_map.png', srcset='/static/images/Bloom/Bloom_flow_map.png 1x, /static/images/Bloom/Bloom_flow_map@2x.png 2x' alt='')
+					figcaption Flow Map that helps the team keep the big picture in mind
+				p I used it to track features progress, find places to add delight, and spot potential friction points. Using it with the team led to crucial conversations. For example, we realized we were neglecting development on the watchlist page, despite it receiving the most user focus. Based on this we adjusted our focus area.
+				h3 The Watchlist
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_watchlist.png', srcset='/static/images/Bloom/Bloom_watchlist.png 1x, /static/images/Bloom/Bloom_watchlist@2x.png 2x' alt='')
+					figcaption Watchlist – from prototype to ideation to final product
+				p The watchlist is the user’s dashboard, which gives the user quick insights into the status of the stocks and ETFs they are following. After going through iterations of releasing, collecting feedback, and designing, I incorporated UX, UI and visual design learnings into the feature. For example, I added a neutral color to the change tag to make major changes stand out and thereby making the page feel calmer and easier to digest.
+				h3 The Stock Page
+				h4 The graph
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_Stock_graph.png', srcset='/static/images/Bloom/Bloom_Stock_graph.png 1x, /static/images/Bloom/Bloom_Stock_graph@2x.png 2x' alt='')
+					figcaption The graph on the stock page – from sketched prototypes to ideation to final product
+				p When the user looks at a stock or ETF, the first thing they see is the graph. Over time, we experimented with its size and information density. In our interviews, users were consistently asking for a way to connect events with changes in a stock’s price. With the News on Graph feature, we addressed this request by creating a visual link between the most impactful news and the changes in the stock. To do so, we use machine learning to filter out the most impactful news and display them for easy access on the graph.
+				h4 The “Bottom Line”
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_overview_content_exploration.png', srcset='/static/images/Bloom/Bloom_overview_content_exploration.png 1x, /static/images/Bloom/Bloom_overview_content_exploration@2x.png 2x' alt='')
+					figcaption The bottom line – iconography exploration and final product
+				p One of our key features is the overview section, which enables users to see the health of a stock at a glance. Today the feature is called "Bottom Line,” and it has undergone multiple iterations both regarding design and content. One of these explorations was to find the right iconography to use for the indicators. I explored whimsical solutions like using smileys or weather report imagery. I also tested out more advance data visualizations. In the end, the simplest solution was the winner in our tests. In the current design, I use icons that are already familiar to the users, which means they don’t have to “learn” a new visual system.
+				h4 Educational content
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_overview_final.png', srcset='/static/images/Bloom/Bloom_overview_final.png 1x, /static/images/Bloom/Bloom_overview_final@2x.png 2x' alt='')
+					figcaption Educational layer with definition of key terms
+				p Overall, we aim to keep the use of investment lingo down. However, many concepts cannot be easily communicated in everyday language. To help the user grow their investment knowledge, we supply them with additional information. Since a highly detailed explanation is too much information for most, we decided to serve summarized content in an action sheet. This way the user can get a quick intro or reminder about a particular term, and then choose if they want to dig deeper or go back to the task at hand.
+				h4 Handling the news	
+				picture.picture
+					img(src='/static/images/Bloom/Bloom_News_explorations.png', srcset='/static/images/Bloom/Bloom_News_explorations.png 1x, /static/images/Bloom/Bloom_News_explorations@2x.png 2x' alt='')
+					figcaption The news – from ideation to final product
+				p More trustworthy and informative news content was a common wish from the users we interviewed. Therefore, the news section in Bloom is curated. In the beginning we wanted to make it easier for users like Nina Newbie and Comfy Carl to find beginner content. However, over time, our research showed that users put higher value on spotting the important news. Therefore, we now use machine learning to categorize the news and enable users to filter by impact.
+			section.section.center
+				p.splash Check Bloom out in the app store
+				a(href='https://linkedin.com/in/mhmichelsen/', target=' ')
+					button.CTA_high Try out Bloom
 			section.feature
-				picture
-					img.clip(src='/static/images/Bloom/Bloom_Eric.jpeg') 
-				blockquote.quote
-					p
-						| &quot;I have worked extensively with Maria on Bloom, where she has developed our product visuals, brand, and UX as a phenomenal designer. Her work has helped us create lasting first impressions of our products that convey delight and trust.
-					p.top
-						| Maria is measured, delightful, and comprehensive as a designer. Her design approach is very systematic, which helps break down open-ended projects and create designs that are reusable and extensible throughout our entire product. Her illustrations give our product charm and whimsy. <br/><br/>Besides that, she isn't attached to her work, a critical must for a good designer. She knows good design comes from the mockups and ideas that never see the light of day. I can trust her to explore and polish every aspect of a design, and come back with solutions toward the sole goal of making the product better.&quot;
-					p.source
-						| Eric Xiao<br/>Founder, Bloom
-		section#projectNav.section.flex
+				hr.line-right
+				.recommendation
+					picture.picture.top
+						img.w80(src='/static/images/Bloom/Bloom_Eric.jpeg') 
+					blockquote.item.top
+						p.quote &quot;I have worked extensively with Maria on Bloom, where she has developed our product visuals, brand, and UX as a phenomenal designer. Her work has helped us create lasting first impressions of our products that convey delight and trust.
+						p.quote.top Maria is measured, delightful, and comprehensive as a designer. Her design approach is very systematic, which helps break down open-ended projects and create designs that are reusable and extensible throughout our entire product. Her illustrations give our product charm and whimsy. <br/><br/>Besides that, she isn't attached to her work, a critical must for a good designer. She knows good design comes from the mockups and ideas that never see the light of day. I can trust her to explore and polish every aspect of a design, and come back with solutions toward the sole goal of making the product better.&quot;
+						p.source Eric Xiao<br/>Founder, Bloom
+				hr.line-left
+		section#projectNav.section
 			nav
 				a(href='/#portfolio') Back to Works
 			nav.right-align
