@@ -16,6 +16,10 @@ window.addEventListener('load', (event) => {
         {
             container: document.querySelector('#meddle-logo-transformation-wrapper'),
             path: '/static/motion/meddle-logo-transformation.json',
+        },
+        {
+            container: document.querySelector('#bloom-newsongraph-transformation-wrapper'),
+            path: '/static/motion/News_on_Chart_v6.json',
         }
     ];
     

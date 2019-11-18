@@ -22,15 +22,18 @@ html(lang='en')
 					p.project-number
 					h2.right-align.inactive Balancing delight and trust in fintech onboarding
 					p.subtitle.right-align case study coming soon ...
+			hr
 			section#bloom.project
 				.cover.right
 					a(href='portfolio/bloom')
-						img(src='/static/images/Bloom/cover.svg', srcset='/static/images/Bloom/cover.png 1x, /static/images/Bloom/cover@2x.png 2x', alt='Bloom cover image', height='auto', width='auto')
+						div#bloom-newsongraph-transformation-wrapper.w100
 				a.project-info(href='portfolio/bloom')
 					p.project-number Project 1 of 2
 					h2 Reinventing Investing
-					p.subtitle – a product design case study
-			section#meddle.project
+					p.subtitle – the product design behind Bloom
+				p.small.faded.top For an indepth case study go to <a class="CTA-medium underline faded" href='https://medium.com/@mhmichelsen/reinventing-investing-ef7a1d490ac3', target=' '>Medium</a>.
+			hr
+			section#meddle.project.top
 				.cover.left
 					a(href='portfolio/meddle')
 						img(src='/static/images/Meddle/Meddle_rebranding_portfolio_cover.png', srcset='/static/images/Meddle/Meddle_rebranding_portfolio_cover.png 1x, /static/images/Meddle/Meddle_rebranding_portfolio_cover@2x.png 2x', height='auto', width='auto')
@@ -44,21 +47,15 @@ html(lang='en')
 					div.flex2
 						div
 							picture.picture.top
-								img.clip.w20(src='/static/images/Bloom/Bloom_Eric.jpeg') 			
+								img.w20(src='/static/images/Bloom/Bloom_Eric.jpeg') 			
 							blockquote.top
 								p.quote &quot;Maria is measured, delightful, and comprehensive as a designer. Her design approach is very systematic, which helps break down open-ended projects and create designs that are reusable and extensible throughout our entire product.&quot;
 								p.source Eric Xiao – Founder, Bloom		
 						div
 							picture.picture.top
-								img.w20.clip(src='/static/images/Meddle/Meddle_Peter_Leonard.jpeg') 		
+								img.w20(src='/static/images/Meddle/Meddle_Peter_Leonard.jpeg') 		
 							blockquote.top
 								p.quote &quot;Maria is a great listener, who made sure to understand my company's values and goals before producing any visuals. She's a lot of fun to collaborate with, always coming up with great ideas when we're stuck creatively.&quot;
 								p.source Peter Leonard – CEO, Meddle
 					hr.line-left
-		//- section#outro
-		//- 	//- img.left.w40(src='/static/images/MHMprofile.jpg', srcset='/static/images/MHMprofile.jpg 1x, /static/images/MHMprofile@0.5.jpg 0.5x, /static/images/MHMprofile@2x.jpg 2x ', alt='Maria Michelsen profile picture', height='auto', width='auto')
-		//- 	div#goodbye
-		//- 		h1 Hi again, 
-		//- 		p.splash Thanks for visiting.
-		//- 		p.name.right-align <i>Maria Hagsten Michelsen</i> <br/>– Product Designer, San Francisco					
 	include ./templates/footer.pug
