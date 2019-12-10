@@ -1,8 +1,22 @@
 doctype html
 html(lang='en')
-	head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# : http://ogp.me/ns/fb/#")		
-		include ../../templates/head.pug
-		meta(property="og:image" content="/static/images/Meddle/Meddle_rebranding_cover.jpg" /)
+	head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# : http://ogp.me/ns/fb/#")
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover')
+		meta(property="og:image" content="/static/images/Bloom/static/images/Bloom/Bloom_cover@2x.png 2x")
+		link(rel='shortcut icon', type='image/x-icon', href='/static/images/favicon.ico')
+		title Maria Michelsen
+		link(rel='stylesheet', type='text/css', href='/stylesheets/main.css')
+		script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111088895-4')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js')
+		script(src='/static/main.js')
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-111088895-4');
+	include ../../templates/header.pug
 	body.white
 		section#project
 			picture.full
