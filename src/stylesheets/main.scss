@@ -613,9 +613,9 @@ hr.line-left {
 	@media (max-width: 1000px) {
 		display: none;
 	}
-	&:hover {
-		top: -10vh;
-	}
+	// &:hover {
+	// 	top: -10vh;
+	// }
 }
 #hero {
 	position: absolute;
@@ -671,6 +671,40 @@ hr.line-left {
 			padding: 2rem 1rem 1rem .5rem;
         }
     }	
+}
+#contact2 {
+	padding: 0;
+	margin: 1rem auto 0 0;
+	ul {
+		font-family: $font-primary;
+		color: $faded;
+		font-size: 1rem;
+		margin-top: $space-reg /2;
+		padding: 0;
+		text-align: left;
+	}
+	ul li {
+		display: inline;
+		padding-right: $space-reg /2;
+	}
+	@media (max-width: 1024px) {
+		ul {
+			margin: 1rem auto;
+		}
+		ul li {
+			padding: 1rem;
+		}
+	}	
+	@media (max-width: 600px) {
+		ul {
+			margin: 1rem 0;
+			text-align: center;
+		}
+		ul li {
+			line-height: 48px;
+			padding: .5rem;
+		}
+	}
 }
 
 /* portfolio list */

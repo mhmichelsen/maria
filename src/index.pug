@@ -6,22 +6,26 @@ html(lang='en')
 			img#arrow(src='/static/images/Arrow.svg' alt='a downward pointing arrow with the text "selected works"')
 		section#intro.flex
 			#descrip
-				h1 Hi there!
-				p#elevator Are you looking for user-centered design solutions based on curiosity, empathy and exploration? 
-				a(href='https://linkedin.com/in/mhmichelsen/', target=' ')
-					button.CTA_high Connect<span class="smallhide"> on LinkedIn</span>
-				hr
-				p.subtitle.center.top.bighide Selected works<br/>⬇
+				h1 Hi there 👋
+				p#elevator I'm a product designer working <br/>at Blend in San Francisco.
+				#contact2
+					ul
+						li
+							a.CTA_medium(href='https://linkedin.com/in/mhmichelsen/', target=' ') LinkedIn
+						li
+							a.CTA_medium(href='https://dribbble.com/mariahagsten', target=' ') Dribbble
+						li
+							a.CTA_medium(href='https://www.instagram.com/mariahagsten/', target=' ') Instagram
 			#hero.smallhide
 				img#alterego(src='/static/images/AlterEgo.svg' alt='artistic and surrealistic drawing of a woman with glasses')
 		section#portfolio
-			section#ghftx.project
-				.cover.left
-					div#gh-onboarding-image-wrapper
-				div.project-info
-					p.project-number
-					h2.right-align.inactive Balancing delight and trust in fintech onboarding
-					p.subtitle.right-align case study coming soon ...
+			//- section#ghftx.project
+			//- 	.cover.left
+			//- 		div#gh-onboarding-image-wrapper
+			//- 	div.project-info
+			//- 		p.project-number
+			//- 		h2.right-align.inactive Balancing delight and trust in fintech onboarding
+			//- 		p.subtitle.right-align case study coming soon ...
 			hr
 			section#bloom.project
 				.cover.right
@@ -40,21 +44,21 @@ html(lang='en')
 					p.project-number.right-align Project 2 of 2 
 					h2.right-align Matching a Dating App with its Target Audience
 					p.subtitle.right-align – a rebranding case study	
-			section#testimonials
-				h3 Testimonials
-					hr.line-right
-					div.flex2
-						div
-							picture.picture.top
-								img.w20(src='/static/images/Bloom/Bloom_Eric.jpeg' alt='') 			
-							blockquote.top
-								p.quote &quot;Maria is measured, delightful, and comprehensive as a designer. Her design approach is very systematic, which helps break down open-ended projects and create designs that are reusable and extensible throughout our entire product.&quot;
-								p.source Eric Xiao – Founder, Bloom		
-						div
-							picture.picture.top
-								img.w20(src='/static/images/Meddle/Meddle_Peter_Leonard.jpeg' alt='') 		
-							blockquote.top
-								p.quote &quot;Maria is a great listener, who made sure to understand my company's values and goals before producing any visuals. She's a lot of fun to collaborate with, always coming up with great ideas when we're stuck creatively.&quot;
-								p.source Peter Leonard – CEO, Meddle
-					hr.line-left
+			//- section#testimonials
+			//- 	h3 Testimonials
+			//- 		hr.line-right
+			//- 		div.flex2
+			//- 			div
+			//- 				picture.picture.top
+			//- 					img.w20(src='/static/images/Bloom/Bloom_Eric.jpeg' alt='') 			
+			//- 				blockquote.top
+			//- 					p.quote &quot;Maria is measured, delightful, and comprehensive as a designer. Her design approach is very systematic, which helps break down open-ended projects and create designs that are reusable and extensible throughout our entire product.&quot;
+			//- 					p.source Eric Xiao – Founder, Bloom		
+			//- 			div
+			//- 				picture.picture.top
+			//- 					img.w20(src='/static/images/Meddle/Meddle_Peter_Leonard.jpeg' alt='') 		
+			//- 				blockquote.top
+			//- 					p.quote &quot;Maria is a great listener, who made sure to understand my company's values and goals before producing any visuals. She's a lot of fun to collaborate with, always coming up with great ideas when we're stuck creatively.&quot;
+			//- 					p.source Peter Leonard – CEO, Meddle
+			//- 		hr.line-left
 	include ./templates/footer.pug
